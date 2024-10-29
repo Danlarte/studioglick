@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from "../components/Services.astro"
+import Team from '../components/Team.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Contact from '../components/Contact.astro';
+import '@fontsource/livvic/300.css';
+import '@fontsource/livvic/400.css';
+import '@fontsource/livvic/700.css';
+
+
+---
+
+<Layout title="Studio Glick">
+	
+	<main class="space-y-20">
+		<Hero/>
+		<Services/>
+	    <Team/>
+		<Testimonial/>
+		<Contact/>
+	</main>
+</Layout>

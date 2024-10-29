@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1000px" height="1000px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(4.16667,0,0,4.16667,0,0)">
+        <g transform="matrix(1.10292,0.00254453,-0.00254453,1.10292,-274.94,-50.2245)">
+            <ellipse cx="357.379" cy="153.757" rx="95.422" ry="95.479"/>
+        </g>
+        <g transform="matrix(1,0,0,1,4.43803,-14.5192)">
+            <path d="M57.759,73.752l-2.629,118.48l124.168,-0l-2.276,-109.015l-119.263,-9.465Z" style="fill:white;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g id="linkedin-seeklogo.svg" transform="matrix(0.458015,0,0,0.458015,122.462,112.157)">
+            <g transform="matrix(1,0,0,1,-256,-256)">
+                <g transform="matrix(0.804451,0.00271374,-0.00271374,0.804451,51.1789,60.0541)">
+                    <path d="M404.823,105.801l-314.935,-12.745c-20.43,-0 -23.966,36.241 -23.966,56.431l0.952,282.435c0,20.3 20.45,21.658 40.88,21.658l285.854,-0.964c20.54,-0 35.38,-1.735 35.38,-21.915l-0.953,-282.435c0.12,-20.19 -2.782,-42.465 -23.212,-42.465Zm-233.953,299.629l-64.18,-0l-0,-199.55l64.18,-0l-0,199.55Zm-29.87,-229.89l-0.46,-0c-20.54,-0 -33.84,-15.29 -33.84,-34.43c-0,-19.49 13.65,-34.42 34.65,-34.42c21,-0 33.85,14.82 34.31,34.42c-0.01,19.14 -13.31,34.43 -34.66,34.43Zm264.43,229.89l-64.18,-0l-0,-109.11c-0,-26.14 -9.34,-44 -32.56,-44c-17.74,-0 -28.24,12 -32.91,23.69c-1.75,4.2 -2.22,9.92 -2.22,15.76l-0,113.66l-64.18,-0l0,-199.55l64.18,-0l0,27.77c9.34,-13.3 23.93,-32.44 57.88,-32.44c42.13,-0 74,27.77 74,87.64l-0.01,116.58Z" style="fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

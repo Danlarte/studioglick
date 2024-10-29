@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import '@fontsource/livvic/300.css';
+import '@fontsource/livvic/400.css';
+import '@fontsource/livvic/700.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Studio Glick" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preload" href="/node_modules/@fontsource/livvic/files/font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <title>Studio Glick</title>
+    <meta
+      name="description"
+      content="Nos especializamos en ofrecer servicios de diseño web, identidad de marca, elementos
+               de branding y desarrollo de E-commerce con tiendas en linea accesibles  y de primer nivel
+               sin comprometer la excelencia."
+    />
+	
+  <ViewTransitions />
+  </head>
+  <body class="bg-gray-950 font-Livvic">
+    <Navbar />
+    <slot />
+    <Footer/>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+/* Studio Glick Astro theme */
+@import '@fontsource/livvic/300.css';
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Livvic';
+  src: url('/fonts/livvic-latin-300-normal.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Livvic';
+  src: url('/fonts/livvic-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* Ejemplo de uso de la fuente Livvic */
+body {
+  font-family: 'Livvic', sans-serif;
+  font-weight: 300; /* Regular */
+}
+
+h1 {
+  font-family: 'Livvic', sans-serif;
+  font-weight: 300; 
+}
+
+h2 {
+  font-family: 'Livvic', sans-serif;
+  font-weight: 300; /* Light */
+  font-style: normal; 
+}
+
+p.emphasis {
+  font-family: 'Livvic', sans-serif;
+  font-weight: 300;
+  font-style: italic; /* Regular Italic */
+}
+
+li{
+  font-family: 'Livvic', sans-serif;
+}
+
+
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d4ff2a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* markdown style */
+.content p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.content h2 {
+  margin: 20px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* accordion style */
+
+.accordion__icon::before,
+  .accordion__icon::after {
+    content: "";
+    position: absolute;
+    background-color: #333333;
+    transition: opacity 0.3s ease;
+  }
+
+  .accordion__icon::before {
+    width: 100%;
+    height: 6px; /* Increased from 2px to 6px */
+    left: 0;
+    top: calc(50% - 3px); /* Adjusted to center the thicker line */
+  }
+
+  .accordion__icon::after {
+    width: 6px; /* Increased from 2px to 6px */
+    height: 100%;
+    left: calc(50% - 3px); /* Adjusted to center the thicker line */
+    top: 0;
+  }
+
+  .accordion__icon.collapsed::after {
+    opacity: 0;
+  }
+
+  /* Slider */
+  .bubble {
+    position: relative;
+    padding: 8%;
+    background-color: #333333;
+    color: white;
+    border-radius: 45px;
+    border: 1px solid #d4ff2a;
+  }
+  .bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Adjust this value to move the arrow up or down */
+    left: 50px; /* Adjust this value to move the arrow left or right */
+    border-width: 22px; /* Adjust this value to change the size of the arrow */
+    border-style: solid;
+    border-color: black transparent transparent black;
+  }
+  .bubble:before {
+    content: "";
+    position: absolute;
+    bottom: -40px; /* This should be 2px more than the bottom value of .bubble:after */
+    left: 48px; /* This should be 1px less than the left value of .bubble:after */
+    border-width: 20px; /* Adjust this to match the border-width of .bubble:after */
+    border-style: solid;
+    border-color: #d4ff2a transparent transparent #d4ff2a
+  }
+  .swiper-wrapper {
+    position: relative;
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 500ms ease-in-out;
+  }
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+    width: auto !important;
+    position: static !important;
+  }
+
+/* Some design */
+.bg-lime {
+  background-color: #d4ff2a;
+  
+}
+
+/* transition hero slider tecnologies Astro.js, netlify , wp , tailwind , docker, github , notion , aws , graphql, node , js,    */
+
+.slider{
+  width: 72vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slider .slide-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(200px * 16);
+
+}
+
+.slider .slide{
+  width: 400px;
+  
+}
+.slider .slide img{
+ width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -wekit-transform:translateX(calc(-200px * 8));
+    transform: translateX(calc(-200px * 8));
+  }
+}
+
+/* Estilos cards productos , acordion, swiper, form*/
+
+#custom-font{
+   font-family: 'Livvic', sans-serif;
+}
+
+#accordion__item{
+  font-family: 'Livvic', sans-serif;
+  margin-bottom: 50px;
+}
+#contactform{
+  font-family: 'Livvic', sans-serif;
+}
+#swiper{
+  font-family:'Livvic', sans-serif ;
+}

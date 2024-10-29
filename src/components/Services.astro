@@ -1,0 +1,69 @@
+---
+import Container from "./Container.astro"
+import Topic from "./Topic.astro";
+import servicesData from './Data/services.json';
+import '@fontsource/livvic/300.css';
+import '@fontsource/livvic/400.css';
+import '@fontsource/livvic/700.css';
+---
+<Container>
+<section id="servicios" >   
+<div class="relative flex flex-col items-center md:flex-row">
+    <Topic title="Servicios" description="Ofrecemos soluciones de alta calidad a precios razonables permitiendo acceder a servicios de primer nivel sin comprometer la excelencia.">
+</div>
+
+<div id="custom-font" class="flex-row items-center gap-4 mt-18 mb-8 py-5 ">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- card start-->
+        {
+        servicesData.map(({ background, name1, name2, arrow, link, image} ) => (
+        <div class={background}>
+            <div class="flex-col justify-center items-start gap-[93px] inline-flex">
+                <div class="flex-col justify-start items-start flex">
+                    <div class="px-[7px] bg-lime-300 rounded-[7px] flex-col justify-start items-start gap-2.5 flex">
+                        <div class=" text-3xl font-medium mt-10 ml-10">{name1}</div>
+                    </div>
+                    <div class="px-[7px] bg-lime-300 rounded-[7px] flex-col justify-start items-start gap-2.5 flex">
+                        <div class="text-3xl font-medium mt-1 ml-10">{name2}</div>
+                    </div>
+                </div>
+                <a class="justify-start items-center gap-[15px] inline-flex" href={link}>
+                    <div class="w-[41px] h-[41px] relative">
+                        <img class="w-[41px] h-[41px] left-6 top-0  absolute" src={arrow} />
+                    </div>
+                    <div class="text-xl font-normal leading-7 ml-6">Comencemos</div>
+                </a>
+            </div>
+            <div class="w-[210px] h-[170px] pt-0.5 pb-[1.95px] justify-center items-center flex ">
+                <img class="hidden md:block " src={image} />
+            </div>
+        </div>
+        ))
+        }
+        <!-- card end-->
+         
+    </div>
+    
+</div>
+
+<div class="flex-row items-center my-6 p-14 bg-gray-950 rounded-[45px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="justify-start items-center gap-[275px] flex">
+            <div class="flex-col justify-start items-start gap-[26px] inline-flex text-black">
+                <div id="custom-font" class="text-3xl font-medium">Hagamos que la magia suceda</div>
+                <div class="text-lg font-normal">Aqui puede pedir un asesoramiento gratuito y tambien ver una guia de cuales son los pasos a seguir para el desarrollo de una marca o producto. </div>
+                <a href="/" class="px-[35px] py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-[14px] justify-start items-start gap-2.5 inline-flex">
+                    <div   id="custom-font" class="text-center text-xl font-normal leading-7">Asesoramiento Gratis</div>
+                </a>
+            </div>
+        </div>
+        <div class="hidden md:grid justify-items-center -m-20 mt-6">
+            <img src="/services/refrescoWeb.svg" width="70%" alt="cat" />
+        </div>
+    </div>
+</div>
+
+</section> 
+</Container>
+

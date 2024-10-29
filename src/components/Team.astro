@@ -1,0 +1,74 @@
+---
+import Container from "./Container.astro"
+import Topic from "./Topic.astro";
+import teamData from './Data/team.json';
+import Accordion from "./Accordion.astro";
+import '@fontsource/livvic/300.css';
+import '@fontsource/livvic/400.css';
+import '@fontsource/livvic/700.css';
+
+---
+<Container>
+
+<section id="procesos" >   
+<div class="relative flex flex-col items-center md:flex-row">
+    <Topic title="Proceso" description="Descubre los pasos clave que seguimos para llevar tu proyecto desde la idea inicial hasta una identidad de marca sólida y una presencia web impactante."/>
+</div>
+</section> 
+
+<div class="my-6">
+    <div class="space-y-10">
+        {
+            teamData.process.map((item) => {
+                return (
+                <Accordion
+                    index= {item.index}
+                    title={item.label}
+                    description={item.content}
+                />
+                );
+            })
+        }
+    </div>
+</div>
+
+<div class="relative flex flex-col items-center md:flex-row pt-6">
+    <Topic title="Al finalizar" description=" Recibirás todos los archivos de diseño y desarrollo web optimizados, incluyendo las versiones finales para impresión, formatos digitales y código fuente."/>
+</div>
+
+
+
+<div class="flex-row items-center py-5" id="team">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
+    {
+    teamData.team.map(({ title, description, name, link, profile} ) => (
+    <div class="h-[331px] px-[35px] py-10 bg-white rounded-[45px] shadow-card border border-zinc-900 flex-col justify-start items-start gap-2.5 inline-flex text-black">
+        <div class="flex-col justify-start items-start gap-7 flex">
+            <div class="self-stretch justify-start items-start inline-flex">
+                <div class="grow shrink basis-0 justify-start items-center gap-8 flex">
+                    <div class="h-[102.82px] left-0 top-0 relative">
+                        <img src={profile} alt={name}/>
+                    </div>
+                    <div class="flex-col justify-end items-start inline-flex">
+                        <div class="text-lg font-normal">{title}</div>
+                        <div class="text-xl font-medium">{name}</div>
+                    </div>
+                </div>
+               
+            </div>
+            <hr class="w-full border border-black"/>
+            <p class="text-sm md:text-lg">{description}</p>
+        </div>
+    </div>
+    ))
+    }
+    </div>
+</div>
+
+<style>
+    img{
+        max-width: 60%;
+    }
+</style>
+
+</Container>
