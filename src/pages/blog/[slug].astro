@@ -1,0 +1,127 @@
+---
+import Layout from "../../layouts/Layaoutblog.astro";
+import { wpquery } from "../../components/Data/wordpress.ts";
+
+export async function getStaticPaths() {
+  const data = await wpquery({
+    query: `
+      query LoadAllPosts {
+        posts {
+          nodes {
+            title
+            slug
+            featuredImage {
+              node {
+                mediaItemUrl
+                altText
+              }
+            }
+            content(format: RENDERED)
+            author {
+              node {
+                name
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return data.posts.nodes.map((post: any) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props; // Acceder directamente al post
+---
+
+<Layout title={post?.title || "Post no encontrado"}>
+  <article class="post-detail">
+    {post ? (
+      <>
+        <h1>{post.title}</h1>
+       
+        
+        {/* Mostrar la imagen destacada si está disponible */}
+        {post.featuredImage && post.featuredImage.node.mediaItemUrl && (
+          <img 
+            src={post.featuredImage.node.mediaItemUrl} 
+            alt={post.featuredImage.node.altText || post.title} 
+          />
+        )}
+
+        <div set:html={post.content}></div>
+
+        {/* Enlace para regresar atrás */}
+        <div class="back-button-container">
+          <a href="javascript:window.history.back()" class="back-button">Regresar a la sección de Blog</a>
+        </div>
+      </>
+    ) : (
+      <p>Lo sentimos, el post no está disponible.</p>
+    )}
+  </article>
+</Layout>
+
+<style>
+body{
+  background-color: #f4bee9;
+  max-width: 920 px;
+}
+p{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+  .post-detail {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 80px;
+    
+  }
+
+  .post-detail img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .post-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+
+
+  .post-detail div {
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+
+  .back-button-container {
+    margin-top: 20px;
+  }
+
+  .back-button {
+    display: inline-block;
+    background-color: #d4ff2a;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .back-button:hover {
+    background-color: #131313;
+  }
+  
+
+
+</style>
+

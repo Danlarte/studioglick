@@ -1,9 +1,7 @@
 ---
 import Container from "./Container.astro"
 import Topic from "./Topic.astro";
-import '@fontsource/livvic/300.css';
-import '@fontsource/livvic/400.css';
-import '@fontsource/livvic/700.css';
+
 ---
 <Container>
 
@@ -13,14 +11,14 @@ import '@fontsource/livvic/700.css';
     <Topic title="Contáctanos" description="Conéctese con nosotros, estamos para ayudarlo" />
 </div>
 
-<div class="relative flex flex-col items-center md:flex-row my-6 bg-zinc-100 rounded-[45px]" id="contactform">
+<div class="formulary relative flex flex-col items-center md:flex-row my-6 rounded-[25px]" id="contactform">
     <div class="row items-center py-12 px-4 md:px-20 md:w-8/12 md:py-10">
         <form action="#" class="space-y-8 md:w-full">
             <div class="flex">
                 
               
             </div>
-           
+            <form name="contact" method="POST" data-netlify="true">
             <div>
                 <label for="email" class="block mb-2 text-base font-medium text-black">Nombre Completo</label>
                 <input type="email" id="email" class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" required>
@@ -33,6 +31,8 @@ import '@fontsource/livvic/700.css';
                 <label for="message" class="block mb-2 text-base font-medium text-black dark:text-gray-400">Mensaje</label>
                 <textarea id="message" rows="6" class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black" placeholder="Message"></textarea>
             </div>
+            <div class="sm:col-span-2" data-netlify-recaptcha="true"></div>
+
             <button type="submit" class="w-full py-5 bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex">
                 <div class="text-center text-white text-xl font-normal leading-7">Enviar Mensaje</div>
             </button>
@@ -43,9 +43,9 @@ import '@fontsource/livvic/700.css';
             <img src="./team/linkedin.svg" class="mb-4" alt="contactame" width="11%"> </a>
         <a href="https://t.me/your_username" target="_blank">
             <img src="./team/whatsapp.svg" class="mb-4" alt="contactame" width="10%"> </a>
-        <a href="https://t.me/your_username" target="_blank" >
+        <a href="https://t.me/StudioGlick" target="_blank" >
             <img src="./team/telegram.svg" class="mb-6" alt="con tactame" width="10%"> </a>
-            <a href="https://t.me/your_username" target="_blank" >
+            <a href="" target="_blank" >
                 <img src="./team/spotify.svg" class="mb-6" alt="con tactame" width="10%"> </a>
         
         <p class="text-center">Escríbenos y comencemos <br> tu proyecto hoy!</p>
@@ -53,3 +53,9 @@ import '@fontsource/livvic/700.css';
 </div>
 </section>
 </Container>
+
+<style>
+    .formulary{
+        background-color: #f4bee9;
+    }
+</style>

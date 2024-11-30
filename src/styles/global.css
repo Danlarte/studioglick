@@ -51,7 +51,32 @@ li{
   font-family: 'Livvic', sans-serif;
 }
 
+.post-detail h2,
+.post-detail h2.wp-block-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #131313;
+}
 
+.post-detail h3,
+.post-detail h3.wp-block-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 30px 0;
+  padding: 8px;
+  color: #131313;
+}
+
+.post-detail h4,
+.post-detail h4.wp-block-heading {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  padding: 5px;
+  color: #131313;
+}
+.wp-block-image.size-large {
+  margin-top: 20px;
+}
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
@@ -63,7 +88,7 @@ li{
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333333;
+  background: #131313;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -88,7 +113,7 @@ li{
   .accordion__icon::after {
     content: "";
     position: absolute;
-    background-color: #333333;
+    background-color: #131313;
     transition: opacity 0.3s ease;
   }
 
@@ -114,7 +139,7 @@ li{
   .bubble {
     position: relative;
     padding: 8%;
-    background-color: #333333;
+    background-color: #131313;
     color: white;
     border-radius: 45px;
     border: 1px solid #d4ff2a;
@@ -153,11 +178,41 @@ li{
     position: static !important;
   }
 
+  table.has-fixed-layout {
+    border-collapse: collapse; /* Elimina espacios entre celdas */
+    width: 100%; /* Asegura que ocupe el ancho del contenedor */
+    border: 1px solid #ddd; /* Borde externo */
+    margin-bottom: 20px;
+}
+
+table.has-fixed-layout th,
+table.has-fixed-layout td {
+    border: 1px solid #131313; /* Bordes internos */
+    padding: 8px; /* Espaciado interno */
+    text-align: left; /* Alineación de texto */
+}
+
+table.has-fixed-layout th {
+    background-color: #f4f4f4; /* Color de fondo del encabezado */
+    font-weight: bold; /* Encabezados en negrita */
+}
+
+table.has-fixed-layout tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fila alterna */
+}
+
+table.has-fixed-layout tr:hover {
+    background-color: #eaeaea; /* Efecto hover */
+}
+
+
 /* Some design */
 .bg-lime {
   background-color: #d4ff2a;
   
 }
+
+
 
 /* transition hero slider tecnologies Astro.js, netlify , wp , tailwind , docker, github , notion , aws , graphql, node , js,    */
 
@@ -166,7 +221,7 @@ li{
   height: auto;
   margin: auto;
   overflow: hidden;
-  background-color: #000;
+  background-color: #131313;
 }
 
 .slider .slide-track {
