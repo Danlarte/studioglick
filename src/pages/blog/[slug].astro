@@ -1,6 +1,6 @@
 ---
-import Layout from "../../layouts/Layaoutblog.astro";
-import { wpquery } from "../../components/Data/wordpress.ts";
+import Layout from '../../layouts/Layaoutblog.astro';
+import { wpquery } from '../../components/Data/wordpress';
 
 export async function getStaticPaths() {
   const data = await wpquery({
@@ -13,6 +13,8 @@ export async function getStaticPaths() {
             featuredImage {
               node {
                 mediaItemUrl
+                srcSet
+                sizes
                 altText
               }
             }
@@ -36,92 +38,24 @@ export async function getStaticPaths() {
   });
 }
 
-const { post } = Astro.props; // Acceder directamente al post
+const { post } = Astro.props;
 ---
 
-<Layout title={post?.title || "Post no encontrado"}>
-  <article class="post-detail">
-    {post ? (
-      <>
-        <h1>{post.title}</h1>
-       
-        
-        {/* Mostrar la imagen destacada si está disponible */}
-        {post.featuredImage && post.featuredImage.node.mediaItemUrl && (
-          <img 
-            src={post.featuredImage.node.mediaItemUrl} 
-            alt={post.featuredImage.node.altText || post.title} 
-          />
-        )}
+<Layout title="Blog Studio Glick">
+  <img
+    src={post.featuredImage.node.mediaItemUrl}
+    srcset={post.featuredImage.node.srcSet}
+    sizes={post.featuredImage.node.sizes}
+    alt={post.featuredImage.node.alt}
+  />
 
-        <div set:html={post.content}></div>
+  <h1>{post.title}</h1>
 
-        {/* Enlace para regresar atrás */}
-        <div class="back-button-container">
-          <a href="javascript:window.history.back()" class="back-button">Regresar a la sección de Blog</a>
-        </div>
-      </>
-    ) : (
-      <p>Lo sentimos, el post no está disponible.</p>
-    )}
-  </article>
+  <p class="byline">Written by {post.author.node.name}</p>
+
+  <Fragment set:html={post.content} />
+
+  <p>
+    <a href="/">&larr; back to all posts</a>
+  </p>
 </Layout>
-
-<style>
-body{
-  background-color: #f4bee9;
-  max-width: 920 px;
-}
-p{
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-  .post-detail {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 80px;
-    
-  }
-
-  .post-detail img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 80px;
-  }
-
-  .post-detail h1 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    margin-top: 50px;
-  }
-
-
-  .post-detail div {
-    line-height: 1.8;
-    margin-bottom: 50px;
-  }
-
-  .back-button-container {
-    margin-top: 20px;
-  }
-
-  .back-button {
-    display: inline-block;
-    background-color: #d4ff2a;
-    color: black;
-    padding: 10px 20px;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .back-button:hover {
-    background-color: #131313;
-  }
-  
-
-
-</style>
-

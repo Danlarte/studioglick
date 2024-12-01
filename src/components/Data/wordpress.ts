@@ -1,10 +1,10 @@
-interface WPGraphQLParams {
+  interface WPGraphQLParams {
     query: string;
     variables?: object;
   }
   
   export async function wpquery({ query, variables = {} }: WPGraphQLParams) {
-    const res = await fetch(' https://apiback.studioglick.us/graphql', {
+    const res = await fetch('https://apiback.studioglick.us/graphql', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -24,7 +24,5 @@ interface WPGraphQLParams {
   
     return data;
   }
-
-
 
   

@@ -1,72 +1,129 @@
 ---
-import  "../styles/global.css";
+const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import '@fontsource/livvic/300.css';
-import '@fontsource/livvic/400.css';
-import '@fontsource/livvic/500.css';
 
-const { title } = Astro.props;
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    
-    <meta charset="UTF-8" />
-    <meta name="description" content="Studio Glick" />
-    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preload" href="/node_modules/@fontsource/livvic/files/font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <title>{title}</title>
   </head>
-
-
   <body>
+    <header>
     
-    
+    </header>
     <Navbar />
-    
-    <slot />
-    <Footer/>
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
-
-
-  
 </html>
 
-<style>
-    * {
-      box-sizing: border-box;
-    }
+<style is:global>
+  * {
+    box-sizing: border-box;
    
-    body {
-      margin: 20px;
-      justify-content: center;
-    }
+  }
+  
+  body {
+    margin-top: 160px;
+  }
 
-    img {
-      width: 100%;
-    }
-  
-    .post-preview h2 {
-      margin-top: 3rem;
-      margin-bottom: 0;
-    }
-  
-    .post-preview h2 a {
-      color: inherit;
-      text-decoration: none;
-      
-    }
-  
-    .byline {
-      color: #131313;
-      font-size: 0.875rem;
-      font-style: italic;
-    }
-  </style>
+  main {
+    margin: 3rem auto;
+    width: min(54ch, 90%);
+  }
 
+ 
+  h1{
+    margin-top: 150px;
+    font-size: x-large;
+  }
+  h2 {
+    color: #cc0fd6;
+    line-height: 1.1;
+    font-size: large;
+   
+  }
+  img {
+    width: 100%;
+  }
+
+
+  .post-preview{
+    border-radius: 20px;
+  
+
+  }
+  
+
+  .post-preview h2  {
+    color: inherit;
+    text-decoration: none;
+    margin: 25px;
+  }
+
+  .post-preview p  {
+   margin: 25px;
+  }
+
+a.nextpost{
+  margin: 25px;
+  color: #cc0fd6;
+ }
+
+ 
+
+  article.post-preview{
+    background-color: #d4ff2a;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    
+    
+  }
+
+  .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; /* Ajusta la altura del héroe según necesites */
+  width: 100; /* Limita el ancho máximo del héroe */
+  margin: 0 auto; /* Centra el héroe en la página */
+  padding: 2rem;
+
+  /* Imagen de fondo */
+  background-image: url('https://images.unsplash.com/photo-1627158191866-aa70f2100d55?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Cambia esta URL por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white; /* Asegura que el texto sea legible */
+  border-radius: 12px; /* Bordes redondeados opcionales */
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro para el texto */
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+  
+
+</style>

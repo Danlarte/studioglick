@@ -1,10 +1,6 @@
 ---
-import Layout from "../layouts/Layaoutblog.astro";
-import { wpquery } from "../components/Data/wordpress";
-import '@fontsource/livvic/300.css';
-import '@fontsource/livvic/400.css';
-import '@fontsource/livvic/500.css';
-
+import Layout from '../layouts/Layaoutblog.astro';
+import { wpquery } from '../components/Data/wordpress';
 
 
 const data = await wpquery({
@@ -18,6 +14,8 @@ const data = await wpquery({
           featuredImage {
             node {
               mediaItemUrl
+              srcSet
+              sizes
               altText
             }
           }
@@ -28,154 +26,44 @@ const data = await wpquery({
 });
 
 ---
+
 <Layout title="Blog Studio Glick">
 
-  <section class="hero">
+
+  <section class="heroblog">
     <div class="hero-content">
-      <h1> Explora nuestro blog, lleno de noticias y artículos interesantes.</h1>
-      <p>Descubre nuestras historias, consejos y novedades más recientes.</p>
-      
+      <h1>Bienvenido a nuestro Blog</h1>
+      <p>Explora las últimas tendencias, proyectos y más.</p>
     </div>
   </section>
- 
-  <div class="container">
-    <h2>Últimos Posts</h2>
+  {
+    data.posts.nodes.map((post: any) => {
+      return (
+        <article class="post-preview">
 
-    <section class="blog-list">
-      {data?.posts?.nodes?.length > 0 ? (
-        data.posts.nodes.map((post: any) => (
-          <article key={post.id} class="post-preview">
-            {post.featuredImage && post.featuredImage.node.mediaItemUrl && (
-              <img 
-                src={post.featuredImage.node.mediaItemUrl} 
-                alt={post.featuredImage.node.altText || post.title} 
-              />
-            )}
-            <h2>
-              <a href={`/blog/${post.slug}`}>{post.title}</a>
-            </h2>
-            
-            <Fragment set:html={post.excerpt} />
-            <a href={`/blog/${post.slug}`} class="read-more">Leer más &rarr;</a>
-          </article>
-        ))
-      ) : (
-        <p>No hay posts disponibles en este momento.</p>
-      )}
-    </section>
-  </div>
+
+
+          {post.featuredImage && post.featuredImage.node.mediaItemUrl && (
+            <img
+              src={post.featuredImage.node.mediaItemUrl}
+              srcset={post.featuredImage.node.srcSet}
+              sizes={post.featuredImage.node.sizes}
+              alt={post.featuredImage.node.altText || post.title}
+              class="featured-image"
+            />
+          )}
+
+
+
+
+          <h2>
+            <a href={`/blog/${post.slug}`}>{post.title}</a>
+          </h2>
+          <Fragment set:html={post.excerpt} />
+          <a  class="nextpost"  href={`/blog/${post.slug}`}>Leer el post completo &rarr;</a>
+        </article>
+      );
+    })
+  }
 </Layout>
 
-
-<style>
-  /* Body */
-  body {
-    margin: 0; /* Elimina el margen por defecto */
-    font-family: livvic 300 sans-serif;
-    background-color: #131313;
-    
-  }
-
-  /* Contenedor principal */
-  .container {
-    width: 100%;
-    max-width: 920px; /* Máximo ancho de la página */
-    margin: 0 auto; /* Centra el contenedor */
-    padding-top: 80px; /* Espaciado superior */
-    padding-bottom: 80px; /* Espaciado inferior */
-  }
-
-  h1{
-    text-align: center;
-    margin-top: 180px;
-    font-family: 'Livvic', sans-serif;
-    font-size: 2vw;
-    background-color: #d4ff2a;
-    padding: 15px;
-    
-  }
-  p{
-    text-align: center;
-    background-color: #f4bee9;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-  
-  h2 {
-    text-align: start;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #f4bee9;
-    
-  }
-
-  /* Blog List */
-  .blog-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas flexibles */
-    gap: 20px;
-    justify-items: center; /* Alinea los items en el eje horizontal */
-    align-items: start;  /* Alinea los items en el eje vertical */
-  }
-
-  /* Responsividad: 2 columnas en pantallas pequeñas */
-  @media (max-width: 800px) {
-    .blog-list {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-    }
-  }
-
-  .blog-list img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-
-  /* Post Preview */
-  .post-preview {
-    background: #f4bee9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    transition: box-shadow 0.3s ease;
-    text-align: start; /* Centra el contenido dentro de cada post */
-    max-width: 100%; /* Asegura que los posts no se desborden */
-    margin: 0 auto; /* Centra los artículos */
-    color: #131313;
-  }
-
-  .post-preview:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .post-preview img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  /* Enlace "Read More" */
-  .read-more {
-    color: #121213;
-    text-decoration: none;
-    font-weight: bold;
-    
-  }
-
-  .read-more:hover {
-    text-decoration: underline;
-  }
-
-  .hero {
-    position: relative;
-    background: url(https://cdn.pixabay.com/photo/2018/10/11/17/38/angel-3740393_1280.jpg) no-repeat center center/cover;
-    height: 80vh; /* Ajusta la altura según tu diseño */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #1d1b1b;
-  }
-</style>
