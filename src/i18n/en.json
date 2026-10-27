@@ -187,11 +187,11 @@
     ]
   },
   "contact": {
-    "title": "Contact us",
-    "description": "Get in touch with us, we're here to help",
-    "ctaLine1": "Write to us and start",
-    "ctaLine2": "your project today!",
-    "altSocial": "Social media contact"
+    "title": "Have a project in mind?",
+    "description": "Tell us what you need and let's talk about how to bring it to life",
+    "cta": "Let's talk about your project",
+    "mailSubject": "Website inquiry",
+    "channelsLabel": "Or write to us directly"
   },
   "pricing": {
     "heading": "We design so you stand out in every post.",

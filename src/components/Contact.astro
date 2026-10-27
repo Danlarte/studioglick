@@ -1,6 +1,5 @@
 ---
 import Container from "./Container.astro"
-import Topic from "./Topic.astro";
 import { getDict, getLocale } from "../i18n";
 
 const t = getDict(getLocale(Astro.url));
@@ -10,32 +9,41 @@ const socials = [
     { href: "https://wa.me/549381090605", icon: "/team/whatsapp.svg", label: "WhatsApp" },
     { href: "mailto:studioglick@gmail.com", icon: "/team/mail.svg", label: "Email" },
 ];
+
+const mailHref = `mailto:studioglick@gmail.com?subject=${encodeURIComponent(t.contact.mailSubject)}`;
 ---
 <Container>
 
-<section id="contactame">
+<section id="contactame" class="scroll-mt-32">
 
-    <div class="relative flex flex-col items-center md:flex-row" >
-    <Topic title={t.contact.title} description={t.contact.description} />
-</div>
-
-<div class="formulary relative flex flex-col items-center my-6 rounded-[25px] py-16 px-6">
-    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14">
-        {socials.map(({ href, icon, label }) => (
-            <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} class="group">
-                <span class="flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-white shadow-sm transition duration-300 group-hover:-translate-y-1.5 group-hover:shadow-md">
-                    <img src={icon} alt={`${t.contact.altSocial} - ${label}`} class="h-10 w-10 md:h-12 md:w-12" />
-                </span>
-            </a>
-        ))}
+    <div class="bg-zinc-900 text-white rounded-[45px] border border-black shadow-card overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-10 md:gap-14 p-8 sm:p-12 lg:p-16 items-center">
+            <div class="space-y-6 text-center md:text-start">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">{t.contact.title}</h2>
+                <p class="text-lg sm:text-xl font-light leading-7 text-zinc-300">{t.contact.description}</p>
+                <a href={mailHref} class="inline-flex w-full sm:w-auto justify-center items-center px-8 py-5 bg-lime hover:bg-white text-black rounded-2xl text-xl font-medium border border-black transition duration-300">
+                    {t.contact.cta}
+                </a>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <div class="flex items-center justify-center h-52 sm:h-64 md:h-80 w-52 sm:w-64 md:w-80 rounded-full bg-lime">
+                    <img src="/team/contact.svg" alt="" class="h-[82%] w-auto" />
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/15 px-8 sm:px-12 lg:px-16 py-8 flex flex-col sm:flex-row sm:items-center gap-6">
+            <p class="text-sm uppercase tracking-widest text-zinc-400 shrink-0">{t.contact.channelsLabel}</p>
+            <div class="flex flex-wrap items-center gap-4">
+                {socials.map(({ href, icon, label }) => (
+                    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} class="inline-flex items-center gap-3 px-5 py-3 bg-white text-black rounded-full border border-black hover:bg-lime transition duration-300 font-medium">
+                        <img src={icon} alt="" class="h-5 w-5" aria-hidden="true" />
+                        {label}
+                    </a>
+                ))}
+            </div>
+        </div>
     </div>
-    <p class="mt-10 text-center text-xl">{t.contact.ctaLine1} <br> {t.contact.ctaLine2}</p>
-</div>
-</section>
-</Container>
 
-<style>
-    .formulary{
-        background-color: #f4bee9;
-    }
-</style>
+</section>
+
+</Container>

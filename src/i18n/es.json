@@ -187,11 +187,11 @@
     ]
   },
   "contact": {
-    "title": "Contáctanos",
-    "description": "Conéctate con nosotros, estamos para ayudarte",
-    "ctaLine1": "Escríbenos y comencemos",
-    "ctaLine2": "tu proyecto hoy!",
-    "altSocial": "Contacto en redes sociales"
+    "title": "¿Tenés un proyecto en mente?",
+    "description": "Contanos qué necesitás y conversemos sobre cómo llevarlo adelante",
+    "cta": "Hablemos de tu proyecto",
+    "mailSubject": "Consulta desde la web",
+    "channelsLabel": "O escribinos directo"
   },
   "pricing": {
     "heading": "Diseñamos para que destaques en cada publicación.",
