@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "title": "Studio Glick",
+    "description": "We specialize in web design services, brand identity, branding elements, and e-commerce development with accessible, top-tier online stores without compromising excellence.",
+    "pricingTitle": "Studio Glick - Social Network Packs",
+    "notFoundTitle": "Page not found - Studio Glick"
+  },
+  "nav": {
+    "items": [
+      { "href": "/", "label": "Home" },
+      { "href": "/#servicios", "label": "Services" },
+      { "href": "/#procesos", "label": "How we work" },
+      { "href": "/pricing", "label": "Packs" },
+      { "href": "/#contactame", "label": "Contact" }
+    ],
+    "langSwitch": "ES",
+    "langSwitchLabel": "Switch to Spanish",
+    "alt": "Logo"
+  },
+  "hero": {
+    "title1": "Creative",
+    "title2": "Effervescence",
+    "paragraph": "At Studio Glick, we are a passionate team of designers and developers dedicated to turning your ideas into visual and digital realities. Our mission is to offer creative, personalized solutions that drive your brand's success",
+    "cta": "We're here to listen!",
+    "alt": "Site illustration",
+    "slideAlt": "Carousel image"
+  },
+  "services": {
+    "title": "Services",
+    "description": "We offer high-quality solutions at reasonable prices, giving you access to first-class services without compromising excellence.",
+    "items": [
+      { "id": 1, "name1": "Design of", "name2": "Visual Identity" },
+      { "id": 2, "name1": "Web Development", "name2": "Wordpress" },
+      { "id": 3, "name1": "Professional Websites", "name2": "Astro.js" },
+      { "id": 4, "name1": "E-commerce", "name2": "Woocommerce" },
+      { "id": 5, "name1": "Content", "name2": "Creation" },
+      { "id": 6, "name1": "Maintenance", "name2": "Support" }
+    ],
+    "cta": "Let's start",
+    "promoTitle": "Let's make the magic happen",
+    "promoText": "Here you can request a free consultation and also see a guide on the steps to follow when developing a brand or product.",
+    "promoCta": "Free Consultation",
+    "alt": "Cat"
+  },
+  "process": {
+    "title": "Our Process",
+    "description": "Discover the key steps we follow to take your project from the initial idea to a solid brand identity and a striking web presence.",
+    "steps": [
+      {
+        "index": 1,
+        "label": "Starting the journey",
+        "content": "In this first stage, you'll tell us about your brand, the goals you want to achieve, your target audience, and any special features you'd like. The goal is to have a clear vision of the project from the start and make sure we are all aligned. Here, we also gather the key details for planning and executing the project."
+      },
+      {
+        "index": 2,
+        "label": "Research and Analysis",
+        "content": "With the information gathered, we begin a deep research phase. We analyze your competitors, the market you are in, and design trends that could benefit your business. This phase also includes an analysis of best practices, methods, and tools that will be useful for the project's development."
+      },
+      {
+        "index": 3,
+        "label": "Creative Proposal",
+        "content": "With the research and analysis in hand, we present an initial creative proposal. Here we show sketches or wireframes that reflect the structure and design of the site, as well as a visual proposal for the graphic identity. We focus on how the site will reflect your brand, how the content will be organized, and how it will improve the user experience."
+      },
+      {
+        "index": 4,
+        "label": "Development and Design",
+        "content": "Once the design and structure are approved, we begin the development process. In this stage, our web design and development team will build your site using best practices in front-end and back-end development. We use technologies like WordPress or Astro.js, depending on the approach that best fits your project. Here the final visual design is created and all necessary functionalities are integrated."
+      },
+      {
+        "index": 5,
+        "label": "Testing and Review",
+        "content": "With the site developed, we start an exhaustive testing phase. We review functionality across different devices, browsers, and use cases to make sure everything works perfectly. We also show you the site to get your feedback and make adjustments as needed. We additionally optimize SEO and set up analytics and metrics tools."
+      },
+      {
+        "index": 6,
+        "label": "Launch and Final Delivery",
+        "content": "Once everything has been reviewed and approved, it's time to launch your website. We deploy it to the server, configure the domain, and verify that everything works perfectly. We make sure the site is ready for user traffic and provide post-launch support for any adjustment or update that may be needed."
+      }
+    ]
+  },
+  "deliverables": {
+    "title": "When we're done",
+    "description": "You will receive all design and web development files, optimized and including final print-ready versions, digital formats, and source code.",
+    "items": [
+      {
+        "title": "Brand Identity",
+        "name": "Final artwork",
+        "description": "We will provide all files, including logos, color palette, typography, and visual applications in print- and digital-ready formats."
+      },
+      {
+        "title": "Web Development",
+        "name": "Files",
+        "description": "We deliver all the files your website needs, including source code, media files, and technical documentation."
+      },
+      {
+        "title": "Online Store",
+        "name": "Products",
+        "description": "We upload up to 10 of your products to the store for free, making sure they include descriptions, prices, images, categories, and attributes."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "description": "Our clients speak for us. They tell how our services have transformed their businesses.",
+    "items": [
+      {
+        "index": 1,
+        "name": "Martina Rodríguez",
+        "description": "Marketing Manager at BioFit Gym",
+        "testimonial": "Social Media Design: Working with Studio Glick was an incredible experience. They captured the essence of our brand and turned it into stunning visual designs for our social media. Highly recommended!"
+      },
+      {
+        "index": 2,
+        "name": "Julián Ferraro",
+        "description": "Founder of Tierra Verde EcoProducts",
+        "testimonial": "We are very grateful to the Studio Glick team, whose collaboration was key to marketing our products through our website. Their professionalism and attention to detail made all the difference in our experience."
+      },
+      {
+        "index": 3,
+        "name": "Dr. Leonardo Pérez",
+        "description": "Clinical Psychologist",
+        "testimonial": "Professional Website: They created a clean, attractive site that reflects my work as a psychologist. It is easy to navigate, and my patients can now find all the information they need quickly and book their appointments."
+      },
+      {
+        "index": 4,
+        "name": "Leonel Rivas",
+        "description": "Web Tecnoconductos",
+        "testimonial": "Online Store: They helped us create an e-commerce website that not only looks great but also works perfectly. From payment integration to the customer experience, everything was executed with attention to detail."
+      },
+      {
+        "index": 5,
+        "name": "Carlos Gómez",
+        "description": "Turismo del Tucumán",
+        "testimonial": "They offered us a design and content creation service that was used at different congresses across the country. They also took care of creating our website. We are very satisfied with their work."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Get in touch with us, we're here to help",
+    "ctaLine1": "Write to us and start",
+    "ctaLine2": "your project today!",
+    "altSocial": "Social media contact"
+  },
+  "pricing": {
+    "heading": "We design so you stand out in every post.",
+    "subtitle": "We work together to give your brand the professional image it deserves.",
+    "suffix": "/ fixed",
+    "cards": [
+      {
+        "name": "Web Starter",
+        "description": "Custom static sites for professionals, portfolios, and blogs",
+        "price": "$299",
+        "features": [
+          { "text": "Built with Astro.js" },
+          { "text": "No hidden fees" },
+          { "text": "Includes:", "strong": "Custom design" },
+          { "text": "Premium support:", "strong": "6 months" },
+          { "text": "Free updates:", "strong": "6 months" }
+        ],
+        "cta": "Start today"
+      },
+      {
+        "name": "Brand Identity",
+        "description": "To keep a consistent, professional brand image",
+        "price": "$249",
+        "features": [
+          { "text": "Logo plus graphic elements" },
+          { "text": "Business cards" },
+          { "text": "Social Media:", "strong": "10 images" },
+          { "text": "Typography:", "strong": "Specific fonts" },
+          { "text": "Stationery:", "strong": "Corporate items." }
+        ],
+        "cta": "Start now"
+      },
+      {
+        "name": "Business",
+        "description": "E-commerce with payment and shipping integrations",
+        "price": "$499",
+        "features": [
+          { "text": "Custom design" },
+          { "text": "WooCommerce Shipping" },
+          { "text": "Initial upload:", "strong": "10 products" },
+          { "text": "Premium support:", "strong": "6 months" },
+          { "text": "Free updates:", "strong": "6 months" }
+        ],
+        "cta": "Let's get started"
+      }
+    ]
+  },
+  "footer": {
+    "text": "Designed by Studio Glick © - Tucumán 🇦🇷 Argentina.",
+    "alt": "Logo"
+  },
+  "notFound": {
+    "message": "Sorry, we couldn't find the page you were looking for",
+    "back": "Back to home page",
+    "alt": "404 error illustration"
+  }
+}

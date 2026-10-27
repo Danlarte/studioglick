@@ -36,6 +36,11 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## 📦 Requirements
+
+- **Node.js >= 24** (usa `nvm use` para instalar/seleccionar la versión de `.nvmrc`)
+- npm 11+
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

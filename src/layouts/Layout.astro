@@ -6,27 +6,36 @@ import { ViewTransitions } from 'astro:transitions';
 import '@fontsource/livvic/300.css';
 import '@fontsource/livvic/400.css';
 import '@fontsource/livvic/700.css';
+import { getDict, getLocale, locales, withLocale } from '../i18n';
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+const locale = getLocale(Astro.url);
+const t = getDict(locale);
+const alternates = locales.map(
+  (l) => new URL(withLocale(Astro.url.pathname, l), Astro.url.origin).href
+);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Studio Glick" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preload" href="/node_modules/@fontsource/livvic/files/font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <title>Studio Glick</title>
-    <meta
-      name="description"
-      content="Nos especializamos en ofrecer servicios de diseño web, identidad de marca, elementos
-               de branding y desarrollo de E-commerce con tiendas en linea accesibles  y de primer nivel
-               sin comprometer la excelencia."
-    />
-	
+    <title>{title ?? t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    {locales.map((l, i) => (
+      <link rel="alternate" hreflang={l} href={alternates[i]} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={alternates[0]} />
+
   <ViewTransitions />
   </head>
   <body class="bg-gray-950 font-Livvic">

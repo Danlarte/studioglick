@@ -1,56 +1,44 @@
 [
     {
         "id": 1,
-        "name1": "Diseño de",
-        "name2": "Identidad Visual",
         "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
-        "link": "./",
-        "image": "./services/identidad.svg"
+        "arrow": "/services/ag.svg",
+        "link": "/",
+        "image": "/services/identidad.svg"
     },
     {
         "id": 2,
-        "name1": "Desarrollo Web",
-        "name2": "Wordpress",
         "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
-        "link": "./",
-        "image": "./services/wp.svg"
+        "arrow": "/services/ag.svg",
+        "link": "/",
+        "image": "/services/wp.svg"
     },
     {
         "id": 3,
-        "name1": "Sitios Profesionales",
-        "name2": "Astro.js",
         "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
-        "arrow": "./services/aw.svg",
-        "link": "./",
-        "image": "./services/astro.svg"
+        "arrow": "/services/aw.svg",
+        "link": "/",
+        "image": "/services/astro.svg"
     },
     {
         "id": 4,
-        "name1": "E-commerce",
-        "name2": "Woocommerce",
         "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
-        "link": "./",
-        "image": "./services/woo.svg"
+        "arrow": "/services/ag.svg",
+        "link": "/",
+        "image": "/services/woo.svg"
     },
     {
         "id": 5,
-        "name1": "Creacion",
-        "name2": "Contenidos",
         "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
-        "arrow": "./services/ag.svg",
-        "link": "./",
-        "image": "./services/redes.svg"
+        "arrow": "/services/ag.svg",
+        "link": "/",
+        "image": "/services/redes.svg"
     },
     {
         "id": 6,
-        "name1": "Mantenimiento",
-        "name2": "Soporte",
         "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
-        "arrow": "./services/aw.svg",
-        "link": "./",
-        "image": "./services/devLogo.svg"
+        "arrow": "/services/aw.svg",
+        "link": "/",
+        "image": "/services/devLogo.svg"
     }
 ]

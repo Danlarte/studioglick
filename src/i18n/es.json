@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "title": "Studio Glick",
+    "description": "Nos especializamos en ofrecer servicios de diseño web, identidad de marca, elementos de branding y desarrollo de E-commerce con tiendas en línea accesibles y de primer nivel sin comprometer la excelencia.",
+    "pricingTitle": "Studio Glick - Packs Social Network",
+    "notFoundTitle": "Página no encontrada - Studio Glick"
+  },
+  "nav": {
+    "items": [
+      { "href": "/", "label": "Home" },
+      { "href": "/#servicios", "label": "Servicios" },
+      { "href": "/#procesos", "label": "Así trabajamos" },
+      { "href": "/pricing", "label": "Packs" },
+      { "href": "/#contactame", "label": "Contacto" }
+    ],
+    "langSwitch": "EN",
+    "langSwitchLabel": "Cambiar a inglés",
+    "alt": "Logo"
+  },
+  "hero": {
+    "title1": "Efervescencia",
+    "title2": "Creativa",
+    "paragraph": "En Studio Glick, somos un equipo apasionado de diseñadores y desarrolladores dedicados a convertir tus ideas en realidades visuales y digitales. Nuestra misión es ofrecer soluciones creativas y personalizadas que impulsen el éxito de tu marca",
+    "cta": "¡Estamos aquí para escucharte!",
+    "alt": "Ilustración del sitio",
+    "slideAlt": "Imagen del carrusel"
+  },
+  "services": {
+    "title": "Servicios",
+    "description": "Ofrecemos soluciones de alta calidad a precios razonables permitiendo acceder a servicios de primer nivel sin comprometer la excelencia.",
+    "items": [
+      { "id": 1, "name1": "Diseño de", "name2": "Identidad Visual" },
+      { "id": 2, "name1": "Desarrollo Web", "name2": "Wordpress" },
+      { "id": 3, "name1": "Sitios Profesionales", "name2": "Astro.js" },
+      { "id": 4, "name1": "E-commerce", "name2": "Woocommerce" },
+      { "id": 5, "name1": "Creación", "name2": "Contenidos" },
+      { "id": 6, "name1": "Mantenimiento", "name2": "Soporte" }
+    ],
+    "cta": "Comencemos",
+    "promoTitle": "Hagamos que la magia suceda",
+    "promoText": "Aquí puede pedir un asesoramiento gratuito y también ver una guía de cuáles son los pasos a seguir para el desarrollo de una marca o producto.",
+    "promoCta": "Asesoramiento Gratis",
+    "alt": "Gato"
+  },
+  "process": {
+    "title": "Proceso",
+    "description": "Descubre los pasos clave que seguimos para llevar tu proyecto desde la idea inicial hasta una identidad de marca sólida y una presencia web impactante.",
+    "steps": [
+      {
+        "index": 1,
+        "label": "Iniciando el viaje",
+        "content": "En esta primera etapa, nos contarás sobre tu marca, los objetivos que deseas alcanzar, el público objetivo y cualquier funcionalidad especial que desees. El objetivo es tener una visión clara del proyecto desde el inicio y asegurar que todos estamos alineados. Aquí, también recopilamos los detalles importantes para la planificación y ejecución del proyecto."
+      },
+      {
+        "index": 2,
+        "label": "Investigación y Análisis",
+        "content": "Con la información recopilada, comenzamos una fase de investigación profunda. Analizamos a tu competencia, el mercado en el que te encuentras, tendencias en diseño que puedan beneficiar tu negocio. Esta fase también incluye un análisis de las mejores prácticas, métodos y herramientas que serán beneficiosas para el desarrollo del proyecto."
+      },
+      {
+        "index": 3,
+        "label": "Propuesta Creativa",
+        "content": "Con la investigación y análisis en mano, presentamos una propuesta creativa inicial. Aquí mostramos bocetos o wireframes que reflejan la estructura y diseño de la web, así como una propuesta visual de la identidad gráfica. Nos enfocamos en cómo el sitio reflejará tu marca, cómo se organizará el contenido, y cómo mejorará la experiencia del usuario."
+      },
+      {
+        "index": 4,
+        "label": "Desarrollo y Diseño",
+        "content": "Una vez aprobado el diseño y la estructura, comenzamos el proceso de desarrollo. En esta etapa, nuestro equipo de diseño y desarrollo web trabajará en construir tu sitio utilizando las mejores prácticas de desarrollo front-end y back-end. Utilizamos tecnologías como WordPress o Astro.js, según el enfoque que mejor se ajuste a tu proyecto. Aquí se crea el diseño visual definitivo y se integran todas las funcionalidades necesarias."
+      },
+      {
+        "index": 5,
+        "label": "Pruebas y Revisión",
+        "content": "Con el sitio desarrollado, comenzamos una fase de pruebas exhaustivas. Revisamos la funcionalidad en diferentes dispositivos, navegadores y situaciones de uso para asegurarnos de que todo funcione a la perfección. Además, te presentamos el sitio para recibir tus comentarios y hacer ajustes según sea necesario. También optimizamos el SEO y configuramos herramientas de análisis y métricas."
+      },
+      {
+        "index": 6,
+        "label": "Lanzamiento y Entrega Final",
+        "content": "Una vez que todo ha sido revisado y aprobado, es hora de lanzar tu sitio web. Realizamos la implementación en el servidor, configuramos el dominio y verificamos que todo funcione perfectamente. Aseguramos que el sitio esté listo para el tráfico de usuarios y proporcionamos soporte post-lanzamiento para cualquier ajuste o actualización que pueda ser necesario."
+      }
+    ]
+  },
+  "deliverables": {
+    "title": "Al finalizar",
+    "description": "Recibirás todos los archivos de diseño y desarrollo web optimizados, incluyendo las versiones finales para impresión, formatos digitales y código fuente.",
+    "items": [
+      {
+        "title": "Identidad de Marca",
+        "name": "Arte final",
+        "description": "Proporcionaremos todos los archivos, incluyendo logotipos, paleta de colores, tipografías y aplicaciones visuales en formatos listos para impresión y digital."
+      },
+      {
+        "title": "Desarrollo Web",
+        "name": "Archivos",
+        "description": "Entregamos todos los archivos necesarios para tu sitio web, incluyendo el código fuente, archivos multimedia y documentación técnica."
+      },
+      {
+        "title": "Tienda Online",
+        "name": "Productos",
+        "description": "Subimos gratis hasta 10 de tus productos en la tienda, asegurando que incluya descripciones, precios, imágenes, categorías y atributos."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "description": "Nuestros clientes hablan por nosotros. Ellos cuentan cómo nuestros servicios han transformado sus negocios.",
+    "items": [
+      {
+        "index": 1,
+        "name": "Martina Rodríguez",
+        "description": "Gerente de Marketing en BioFit Gym",
+        "testimonial": "Diseño para Redes Sociales: Trabajar con Studio Glick fue una experiencia increíble. Capturaron la esencia de nuestra marca y la convirtieron en diseños visuales impresionantes para nuestras redes sociales. ¡Totalmente recomendados!"
+      },
+      {
+        "index": 2,
+        "name": "Julián Ferraro",
+        "description": "Fundador de Tierra Verde EcoProducts",
+        "testimonial": "Estamos muy agradecidos con el equipo de Studio Glick, cuya colaboración ha sido fundamental para la comercialización de nuestros productos a través de nuestra página web. Su profesionalismo y atención al detalle marcaron la diferencia en nuestra experiencia."
+      },
+      {
+        "index": 3,
+        "name": "Dr. Leonardo Pérez",
+        "description": "Psicólogo Clínico",
+        "testimonial": "Sitio Profesional: Crearon un sitio limpio y atractivo que refleja mi trabajo como psicólogo. Es fácil de navegar y mis pacientes ahora pueden encontrar toda la información que necesitan rápidamente y organizar sus turnos."
+      },
+      {
+        "index": 4,
+        "name": "Leonel Rivas",
+        "description": "Web Tecnoconductos",
+        "testimonial": "Tienda en Línea: Nos ayudaron a crear un sitio web de e-commerce que no solo se ve genial, sino que también funciona a la perfección. Desde la integración de pagos hasta la experiencia del cliente, todo fue ejecutado con atención al detalle."
+      },
+      {
+        "index": 5,
+        "name": "Carlos Gómez",
+        "description": "Turismo del Tucumán",
+        "testimonial": "Nos ofrecieron un servicio de diseño y creación de contenido que fue utilizado en diferentes congresos de todo el país. Ellos también se encargaron de la creación de nuestra página web. Estamos muy satisfechos con su trabajo."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Conéctate con nosotros, estamos para ayudarte",
+    "ctaLine1": "Escríbenos y comencemos",
+    "ctaLine2": "tu proyecto hoy!",
+    "altSocial": "Contacto en redes sociales"
+  },
+  "pricing": {
+    "heading": "Diseñamos para que destaques en cada publicación.",
+    "subtitle": "Trabajamos juntos para darle a tu marca la imagen profesional que merece.",
+    "suffix": "/ final",
+    "cards": [
+      {
+        "name": "Web Starter",
+        "description": "Sitios estáticos personalizados para profesionales, portafolios y blogs",
+        "price": "$299",
+        "features": [
+          { "text": "Desarrollado en Astro.js" },
+          { "text": "Sin cargos ocultos" },
+          { "text": "Incluye:", "strong": "Diseño personalizado" },
+          { "text": "Soporte premium:", "strong": "6 meses" },
+          { "text": "Free updates:", "strong": "6 meses" }
+        ],
+        "cta": "Inicia hoy mismo"
+      },
+      {
+        "name": "Identidad de Marca",
+        "description": "Para mantener una imagen de marca consistente y profesional",
+        "price": "$249",
+        "features": [
+          { "text": "Logotipo más elementos gráficos" },
+          { "text": "Tarjetas de presentación" },
+          { "text": "Redes Sociales:", "strong": "10 imágenes" },
+          { "text": "Tipografías:", "strong": "Fuentes específicas" },
+          { "text": "Papelería:", "strong": "Elementos corporativos." }
+        ],
+        "cta": "Empieza ahora"
+      },
+      {
+        "name": "Negocios",
+        "description": "Ecommerce con integraciones de medios de pago y envíos",
+        "price": "$499",
+        "features": [
+          { "text": "Diseño personalizado" },
+          { "text": "WooCommerce Shipping" },
+          { "text": "Carga inicial:", "strong": "10 productos" },
+          { "text": "Soporte premium:", "strong": "6 meses" },
+          { "text": "Free updates:", "strong": "6 meses" }
+        ],
+        "cta": "Comencemos"
+      }
+    ]
+  },
+  "footer": {
+    "text": "Diseñado por Studio Glick © - Tucumán 🇦🇷 Argentina.",
+    "alt": "Logo"
+  },
+  "notFound": {
+    "message": "Lo sentimos, no pudimos encontrar la página que estabas buscando",
+    "back": "Volver a página de inicio",
+    "alt": "Ilustración de error 404"
+  }
+}

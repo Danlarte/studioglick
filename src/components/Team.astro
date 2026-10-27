@@ -6,20 +6,28 @@ import Accordion from "./Accordion.astro";
 import '@fontsource/livvic/300.css';
 import '@fontsource/livvic/400.css';
 import '@fontsource/livvic/700.css';
+import { getDict, getLocale } from "../i18n";
+
+const t = getDict(getLocale(Astro.url));
+
+const deliverables = teamData.team.map((asset, i) => ({
+  ...asset,
+  ...t.deliverables.items[i],
+}));
 
 ---
 <Container>
 
 <section id="procesos" >   
 <div class="relative flex flex-col items-center md:flex-row">
-    <Topic title="Proceso" description="Descubre los pasos clave que seguimos para llevar tu proyecto desde la idea inicial hasta una identidad de marca sólida y una presencia web impactante."/>
+    <Topic title={t.process.title} description={t.process.description}/>
 </div>
 </section> 
 
 <div class="my-6">
     <div class="space-y-10">
         {
-            teamData.process.map((item) => {
+            t.process.steps.map((item) => {
                 return (
                 <Accordion
                     index= {item.index}
@@ -33,7 +41,7 @@ import '@fontsource/livvic/700.css';
 </div>
 
 <div class="relative flex flex-col items-center md:flex-row pt-6">
-    <Topic title="Al finalizar" description=" Recibirás todos los archivos de diseño y desarrollo web optimizados, incluyendo las versiones finales para impresión, formatos digitales y código fuente."/>
+    <Topic title={t.deliverables.title} description={t.deliverables.description}/>
 </div>
 
 
@@ -41,7 +49,7 @@ import '@fontsource/livvic/700.css';
 <div class="flex-row items-center py-5" id="team">
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
     {
-    teamData.team.map(({ title, description, name, link, profile} ) => (
+    deliverables.map(({ title, description, name, profile} ) => (
     <div class="h-[331px] px-[35px] py-10 bg-white rounded-[45px] shadow-card border border-zinc-900 flex-col justify-start items-start gap-2.5 inline-flex text-black">
         <div class="flex-col justify-start items-start gap-7 flex">
             <div class="self-stretch justify-start items-start inline-flex">

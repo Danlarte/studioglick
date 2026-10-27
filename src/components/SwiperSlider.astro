@@ -1,36 +1,7 @@
 ---
-const slides = [
-  { 
-    index: 1, 
-    name: "Martina Rodríguez", 
-    description: "Gerente de Marketing en BioFit Gym", 
-    testimonial: "Diseño para Redes Sociales: Trabajar con Studio Glick fue una experiencia increíble. Capturaron la esencia de nuestra marca y la convirtieron en diseños visuales impresionantes para nuestras redes sociales.¡Totalmente recomendados!"
-  },
-  { 
-    index: 2, 
-    name: "Julián Ferraro", 
-    description: "Fundador de Tierra Verde EcoProducts", 
-    testimonial: "Estamos muy agradecidos con el equipo de Studio Glick, cuya colaboración ha sido fundamental para la comercialización de nuestros productos a través de nuestra página web. Su profesionalismo y atención al detalle marcaron la diferencia en nuestra experiencia."
-  },
-  {
-    index: 3,
-    name: "Dr. Leonardo Pérez",
-    description: "Psicólogo Clínico",
-    testimonial: "Sitio Profesional : Crearon un sitio limpio y atractivo que refleja mi trabajo como psicólogo. Es fácil de navegar y mis pacientes ahora pueden encontrar toda la información que necesitan rápidamente y organizar sus turnos."
-  },
-  { 
-    index: 4, 
-    name: "Leonel Rivas", 
-    description: "Web Tecnoconductos", 
-    testimonial: "Tienda en Línea: Nos ayudaron a crear un sitio web de e-commerce que no solo se ve genial, sino que también funciona a la perfección. Desde la integración de pagos hasta la experiencia del cliente, todo fue ejecutado con atención al detalle."
-  },
-  { 
-    index: 5, 
-    name: "Carlos Gómez", 
-    description: "Turismo del Tucumán", 
-    testimonial: "Nos ofrecieron unn servicio de diseño y creacion de contenido que fue utilizado en diferentes congresos de todos el pais. Ellos tambien se encargaron de la creacion de nuestra pagina web. Estamos muy satisfechos con su trabajo"
-  },
-];
+import { getDict, getLocale } from "../i18n";
+
+const slides = getDict(getLocale(Astro.url)).testimonials.items;
 ---
 
 <div

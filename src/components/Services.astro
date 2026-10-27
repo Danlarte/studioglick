@@ -5,11 +5,20 @@ import servicesData from './Data/services.json';
 import '@fontsource/livvic/300.css';
 import '@fontsource/livvic/400.css';
 import '@fontsource/livvic/700.css';
+import { getDict, getLocale, withLocale } from "../i18n";
+
+const locale = getLocale(Astro.url);
+const t = getDict(locale);
+
+const services = servicesData.map((item) => {
+  const text = t.services.items.find((i) => i.id === item.id);
+  return { ...item, name1: text?.name1 ?? "", name2: text?.name2 ?? "" };
+});
 ---
 <Container>
 <section id="servicios" >   
 <div class="relative flex flex-col items-center md:flex-row">
-    <Topic title="Servicios" description="Ofrecemos soluciones de alta calidad a precios razonables permitiendo acceder a servicios de primer nivel sin comprometer la excelencia.">
+    <Topic title={t.services.title} description={t.services.description}>
 </div>
 
 <div id="custom-font" class="flex-row items-center gap-4 mt-18 mb-8 py-5 ">
@@ -17,7 +26,7 @@ import '@fontsource/livvic/700.css';
 
         <!-- card start-->
         {
-        servicesData.map(({ background, name1, name2, arrow, link, image} ) => (
+        services.map(({ background, name1, name2, arrow, link, image} ) => (
         <div class={background}>
             <div class="flex-col justify-center items-start gap-[93px] inline-flex">
                 <div class="flex-col justify-start items-start flex">
@@ -28,11 +37,11 @@ import '@fontsource/livvic/700.css';
                         <div class="text-3xl font-medium mt-1 ml-10">{name2}</div>
                     </div>
                 </div>
-                <a class="justify-start items-center gap-[15px] inline-flex" href={link}>
+                <a class="justify-start items-center gap-[15px] inline-flex" href={withLocale(link, locale)}>
                     <div class="w-[41px] h-[41px] relative">
                         <img class="w-[41px] h-[41px] left-6 top-0  absolute" src={arrow} />
                     </div>
-                    <div class="text-xl font-normal leading-7 ml-6">Comencemos</div>
+                    <div class="text-xl font-normal leading-7 ml-6">{t.services.cta}</div>
                 </a>
             </div>
             <div class="w-[210px] h-[170px] pt-0.5 pb-[1.95px] justify-center items-center flex ">
@@ -51,15 +60,15 @@ import '@fontsource/livvic/700.css';
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="justify-start items-center gap-[275px] flex">
             <div class="flex-col justify-start items-start gap-[26px] inline-flex text-black">
-                <div id="custom-font" class="text-3xl font-medium">Hagamos que la magia suceda</div>
-                <div class="text-lg font-normal">Aqui puede pedir un asesoramiento gratuito y tambien ver una guia de cuales son los pasos a seguir para el desarrollo de una marca o producto. </div>
+                <div id="custom-font" class="text-3xl font-medium">{t.services.promoTitle}</div>
+                <div class="text-lg font-normal">{t.services.promoText}</div>
                 <a href="/" class="px-[35px] py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-[14px] justify-start items-start gap-2.5 inline-flex">
-                    <div   id="custom-font" class="text-center text-xl font-normal leading-7">Asesoramiento Gratis</div>
+                    <div   id="custom-font" class="text-center text-xl font-normal leading-7">{t.services.promoCta}</div>
                 </a>
             </div>
         </div>
         <div class="hidden md:grid justify-items-center -m-20 mt-6">
-            <img src="/services/refrescoWeb.svg" width="70%" alt="cat" />
+            <img src="/services/refrescoWeb.svg" width="70%" alt={t.services.alt} />
         </div>
     </div>
 </div>

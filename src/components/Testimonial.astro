@@ -2,10 +2,13 @@
 import Container from "./Container.astro"
 import Topic from "./Topic.astro"
 import SwiperSlider from "./SwiperSlider.astro";
+import { getDict, getLocale } from "../i18n";
+
+const t = getDict(getLocale(Astro.url));
 ---
 <Container>
 <div class="relative flex flex-col items-center md:flex-row">
-    <Topic title="Testimonios" description="Nuestros clientes hablan por nosotros. Ellos cuentan cómo nuestros servicios han transformado sus negocios." />
+    <Topic title={t.testimonials.title} description={t.testimonials.description} />
 </div>
 
 <div class="rounded-[45px] bg-black mb-[150px] text-white">

@@ -4,17 +4,18 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import '@fontsource/livvic/300.css';
 import '@fontsource/livvic/400.css';
 import '@fontsource/livvic/700.css';
+import { getDict, getLocale, withLocale, type Locale } from "../i18n";
 
-const menuitems = [
-  { href: '/', label: 'Home' },
-  { href: '/#servicios', label: 'Servicios' },
-  { href: '/#procesos', label: 'Así trabajamos' },
-  { href: '/pricing', label: 'Packs' },
-  { href: '/#contactame', label: 'Contacto' },
-  { href: '/blog', label: 'Blog' },
-];
+const locale = getLocale(Astro.url);
+const t = getDict(locale);
 
-const navButton = { href: 'https://idiomas', label: 'US / ES' };
+const otherLocale: Locale = locale === "es" ? "en" : "es";
+const switchHref = withLocale(Astro.url.pathname, otherLocale);
+
+const menuitems = t.nav.items.map((item) => ({
+  href: withLocale(item.href, locale),
+  label: item.label,
+}));
 ---
 
 <div class="mt-20">
@@ -23,8 +24,8 @@ const navButton = { href: 'https://idiomas', label: 'US / ES' };
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/logoWeb.png" class="h-10" alt="Logo" />
+        <a href={withLocale("/", locale)} class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/logoWeb.png" class="h-10" alt={t.nav.alt} />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-8 h-8 text-black" />
@@ -32,13 +33,13 @@ const navButton = { href: 'https://idiomas', label: 'US / ES' };
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0">
-          {menuitems.map((item, index) => (
+          {menuitems.map((item) => (
             <li>
                 <a href={item.href} class="block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0">{item.label}</a>
             </li>
           ))}
           <div class="lg:hidden flex items-center justify-center mt-3 gap-4">
-              <a class="px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href={navButton.href} target="_blank"><h2 class="text-center text-xl font-normal leading-7">{navButton.label}</h2>
+              <a class="px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href={switchHref} aria-label={t.nav.langSwitchLabel}><h2 class="text-center text-xl font-normal leading-7">{t.nav.langSwitch}</h2>
               </a>
           </div>
         </ul>
@@ -46,7 +47,7 @@ const navButton = { href: 'https://idiomas', label: 'US / ES' };
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a class="px-4 py-2 rounded-3xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href={navButton.href} target="_blank"><h2 class="text-center text-xl font-normal leading-7">{navButton.label}</h2>
+        <a class="px-4 py-2 rounded-3xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href={switchHref} aria-label={t.nav.langSwitchLabel}><h2 class="text-center text-xl font-normal leading-7">{t.nav.langSwitch}</h2>
         </a>
       </div>
     </div>
