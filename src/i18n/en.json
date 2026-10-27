@@ -74,32 +74,32 @@
       {
         "index": 1,
         "label": "Starting the journey",
-        "content": "In this first stage, you'll tell us about your brand, the goals you want to achieve, your target audience, and any special features you'd like. The goal is to have a clear vision of the project from the start and make sure we are all aligned. Here, we also gather the key details for planning and executing the project."
+        "content": "You tell us about your brand, goals, audience, and any special requirements. We align the project vision from the start and gather the key details for planning."
       },
       {
         "index": 2,
         "label": "Research and Analysis",
-        "content": "With the information gathered, we begin a deep research phase. We analyze your competitors, the market you are in, and design trends that could benefit your business. This phase also includes an analysis of best practices, methods, and tools that will be useful for the project's development."
+        "content": "We analyze your competitors, market, and design trends that can benefit your business, along with the best practices and tools for the project."
       },
       {
         "index": 3,
         "label": "Creative Proposal",
-        "content": "With the research and analysis in hand, we present an initial creative proposal. Here we show sketches or wireframes that reflect the structure and design of the site, as well as a visual proposal for the graphic identity. We focus on how the site will reflect your brand, how the content will be organized, and how it will improve the user experience."
+        "content": "We present sketches and wireframes for the site plus a visual identity proposal, focused on brand, content, and user experience."
       },
       {
         "index": 4,
         "label": "Development and Design",
-        "content": "Once the design and structure are approved, we begin the development process. In this stage, our web design and development team will build your site using best practices in front-end and back-end development. We use technologies like WordPress or Astro.js, depending on the approach that best fits your project. Here the final visual design is created and all necessary functionalities are integrated."
+        "content": "We build your site with front-end and back-end best practices—WordPress or Astro.js depending on what fits best—and integrate every feature."
       },
       {
         "index": 5,
         "label": "Testing and Review",
-        "content": "With the site developed, we start an exhaustive testing phase. We review functionality across different devices, browsers, and use cases to make sure everything works perfectly. We also show you the site to get your feedback and make adjustments as needed. We additionally optimize SEO and set up analytics and metrics tools."
+        "content": "We test across devices and browsers, walk you through the site for feedback and adjustments, and optimize SEO and analytics."
       },
       {
         "index": 6,
         "label": "Launch and Final Delivery",
-        "content": "Once everything has been reviewed and approved, it's time to launch your website. We deploy it to the server, configure the domain, and verify that everything works perfectly. We make sure the site is ready for user traffic and provide post-launch support for any adjustment or update that may be needed."
+        "content": "We deploy to the server, configure the domain, and verify everything works. Your site is ready for traffic, with post-launch support for any tweaks."
       }
     ]
   },

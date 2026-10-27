@@ -74,32 +74,32 @@
       {
         "index": 1,
         "label": "Iniciando el viaje",
-        "content": "En esta primera etapa, nos contarás sobre tu marca, los objetivos que deseas alcanzar, el público objetivo y cualquier funcionalidad especial que desees. El objetivo es tener una visión clara del proyecto desde el inicio y asegurar que todos estamos alineados. Aquí, también recopilamos los detalles importantes para la planificación y ejecución del proyecto."
+        "content": "Nos contás sobre tu marca, objetivos, público y requerimientos especiales. Alineamos la visión del proyecto desde el inicio y recopilamos los datos clave para planificar su ejecución."
       },
       {
         "index": 2,
         "label": "Investigación y Análisis",
-        "content": "Con la información recopilada, comenzamos una fase de investigación profunda. Analizamos a tu competencia, el mercado en el que te encuentras, tendencias en diseño que puedan beneficiar tu negocio. Esta fase también incluye un análisis de las mejores prácticas, métodos y herramientas que serán beneficiosas para el desarrollo del proyecto."
+        "content": "Analizamos competencia, mercado y tendencias de diseño que puedan sumar a tu negocio, junto con las mejores prácticas y herramientas para el proyecto."
       },
       {
         "index": 3,
         "label": "Propuesta Creativa",
-        "content": "Con la investigación y análisis en mano, presentamos una propuesta creativa inicial. Aquí mostramos bocetos o wireframes que reflejan la estructura y diseño de la web, así como una propuesta visual de la identidad gráfica. Nos enfocamos en cómo el sitio reflejará tu marca, cómo se organizará el contenido, y cómo mejorará la experiencia del usuario."
+        "content": "Presentamos bocetos y wireframes de la web, además de una propuesta visual de identidad gráfica, con foco en marca, contenido y experiencia de usuario."
       },
       {
         "index": 4,
         "label": "Desarrollo y Diseño",
-        "content": "Una vez aprobado el diseño y la estructura, comenzamos el proceso de desarrollo. En esta etapa, nuestro equipo de diseño y desarrollo web trabajará en construir tu sitio utilizando las mejores prácticas de desarrollo front-end y back-end. Utilizamos tecnologías como WordPress o Astro.js, según el enfoque que mejor se ajuste a tu proyecto. Aquí se crea el diseño visual definitivo y se integran todas las funcionalidades necesarias."
+        "content": "Construimos tu sitio con las mejores prácticas de front-end y back-end, usando WordPress o Astro.js según lo que mejor se ajuste al proyecto, e integramos todas las funcionalidades."
       },
       {
         "index": 5,
         "label": "Pruebas y Revisión",
-        "content": "Con el sitio desarrollado, comenzamos una fase de pruebas exhaustivas. Revisamos la funcionalidad en diferentes dispositivos, navegadores y situaciones de uso para asegurarnos de que todo funcione a la perfección. Además, te presentamos el sitio para recibir tus comentarios y hacer ajustes según sea necesario. También optimizamos el SEO y configuramos herramientas de análisis y métricas."
+        "content": "Probamos el sitio en distintos dispositivos y navegadores, lo presentamos para recibir tus comentarios y ajustes, y optimizamos SEO y métricas."
       },
       {
         "index": 6,
         "label": "Lanzamiento y Entrega Final",
-        "content": "Una vez que todo ha sido revisado y aprobado, es hora de lanzar tu sitio web. Realizamos la implementación en el servidor, configuramos el dominio y verificamos que todo funcione perfectamente. Aseguramos que el sitio esté listo para el tráfico de usuarios y proporcionamos soporte post-lanzamiento para cualquier ajuste o actualización que pueda ser necesario."
+        "content": "Implementamos el sitio en el servidor, configuramos el dominio y verificamos que todo funcione. Queda listo para recibir tráfico, con soporte post-lanzamiento para ajustes."
       }
     ]
   },
