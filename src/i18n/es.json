@@ -18,10 +18,13 @@
     "alt": "Logo"
   },
   "hero": {
+    "eyebrow": "ESTUDIO CREATIVO INDEPENDIENTE",
     "title1": "Efervescencia",
     "title2": "Creativa",
-    "paragraph": "En Studio Glick, somos un equipo apasionado de diseñadores y desarrolladores dedicados a convertir tus ideas en realidades visuales y digitales. Nuestra misión es ofrecer soluciones creativas y personalizadas que impulsen el éxito de tu marca",
-    "cta": "¡Estamos aquí para escucharte!",
+    "subtitle": "Diseño de marcas y experiencias digitales con personalidad",
+    "description": "Combinamos identidad visual, diseño web y desarrollo para transformar ideas en proyectos reales",
+    "cta": "Hablemos de tu proyecto",
+    "ctaSecondary": "Ver proyectos",
     "alt": "Ilustración del sitio",
     "slideAlt": "Imagen del carrusel"
   },

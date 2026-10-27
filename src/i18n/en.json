@@ -18,10 +18,13 @@
     "alt": "Logo"
   },
   "hero": {
+    "eyebrow": "INDEPENDENT CREATIVE STUDIO",
     "title1": "Creative",
     "title2": "Effervescence",
-    "paragraph": "At Studio Glick, we are a passionate team of designers and developers dedicated to turning your ideas into visual and digital realities. Our mission is to offer creative, personalized solutions that drive your brand's success",
-    "cta": "We're here to listen!",
+    "subtitle": "Brand and digital experience design with personality",
+    "description": "We combine visual identity, web design, and development to turn ideas into real projects",
+    "cta": "Let's talk about your project",
+    "ctaSecondary": "View projects",
     "alt": "Site illustration",
     "slideAlt": "Carousel image"
   },
