@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "site": "https://yokobeauty.com.ar/",
+        "image": "/images/yoko.webp",
+        "featured": true,
+        "placeholder": "bg-lime text-black"
+    },
+    {
+        "id": 2,
+        "site": "https://plutonia.ar/",
+        "image": "/images/plutonia.webp",
+        "featured": false,
+        "placeholder": "bg-black text-white"
+    },
+    {
+        "id": 3,
+        "site": "https://ruajvajillaantigua.com.ar/",
+        "image": "/images/ruaj.webp",
+        "featured": false,
+        "placeholder": "bg-[#F5BDE9] text-black"
+    }
+]

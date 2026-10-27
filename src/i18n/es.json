@@ -30,16 +30,38 @@
   },
   "services": {
     "title": "Servicios",
-    "description": "Ofrecemos soluciones de alta calidad a precios razonables permitiendo acceder a servicios de primer nivel sin comprometer la excelencia.",
+    "description": "Soluciones creativas y digitales diseñadas para las necesidades reales de cada proyecto",
     "items": [
-      { "id": 1, "name1": "Diseño de", "name2": "Identidad Visual" },
-      { "id": 2, "name1": "Desarrollo Web", "name2": "Wordpress" },
-      { "id": 3, "name1": "Sitios Profesionales", "name2": "Astro.js" },
-      { "id": 4, "name1": "E-commerce", "name2": "Woocommerce" },
-      { "id": 5, "name1": "Creación", "name2": "Contenidos" },
-      { "id": 6, "name1": "Mantenimiento", "name2": "Soporte" }
+      {
+        "id": 1,
+        "title": "Identidad y branding",
+        "description": "Creamos identidades visuales con personalidad para marcas que quieren diferenciarse",
+        "metaLabel": "Capacidades",
+        "meta": "Naming, identidad visual, dirección de arte, aplicaciones de marca, creación de contenidos e ilustración"
+      },
+      {
+        "id": 2,
+        "title": "Diseño y desarrollo web",
+        "description": "Diseñamos y desarrollamos sitios personalizados que combinan estética, funcionalidad y rendimiento",
+        "metaLabel": "Tecnologías",
+        "meta": "WordPress, Astro y desarrollo Front-End"
+      },
+      {
+        "id": 3,
+        "title": "Tiendas online",
+        "description": "Creamos experiencias de compra digitales adaptadas a los productos y objetivos de cada negocio",
+        "metaLabel": "Tecnologías",
+        "meta": "WooCommerce y WordPress"
+      },
+      {
+        "id": 4,
+        "title": "Mantenimiento y optimización",
+        "description": "Mantenemos y mejoramos sitios existentes para que sigan siendo seguros, rápidos y funcionales",
+        "metaLabel": "Capacidades",
+        "meta": "Actualizaciones, rendimiento, seguridad y soporte"
+      }
     ],
-    "cta": "Comencemos",
+    "cta": "Consultar servicio",
     "promoTitle": "Hagamos que la magia suceda",
     "promoText": "Aquí puede pedir un asesoramiento gratuito y también ver una guía de cuáles son los pasos a seguir para el desarrollo de una marca o producto.",
     "promoCta": "Asesoramiento Gratis",
@@ -99,6 +121,32 @@
         "title": "Tienda Online",
         "name": "Productos",
         "description": "Subimos gratis hasta 10 de tus productos en la tienda, asegurando que incluya descripciones, precios, imágenes, categorías y atributos."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos seleccionados",
+    "description": "Trabajos reales en branding, desarrollo web y comercio electrónico",
+    "servicesLabel": "Servicios",
+    "visit": "Ver sitio",
+    "items": [
+      {
+        "id": 1,
+        "name": "YOKO Beauty",
+        "type": "Branding y e-commerce",
+        "services": "Naming, identidad visual, dirección de arte, diseño web, WooCommerce"
+      },
+      {
+        "id": 2,
+        "name": "Plutonia",
+        "type": "Desarrollo web y e-commerce",
+        "services": "Desarrollo WordPress, WooCommerce, animaciones GSAP, experiencia visual interactiva"
+      },
+      {
+        "id": 3,
+        "name": "RUAJ Vajilla Antigua",
+        "type": "Sitio comercial con tienda online",
+        "services": "Diseño web, desarrollo WordPress, WooCommerce"
       }
     ]
   },

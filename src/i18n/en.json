@@ -30,16 +30,38 @@
   },
   "services": {
     "title": "Services",
-    "description": "We offer high-quality solutions at reasonable prices, giving you access to first-class services without compromising excellence.",
+    "description": "Creative and digital solutions designed for the real needs of each project",
     "items": [
-      { "id": 1, "name1": "Design of", "name2": "Visual Identity" },
-      { "id": 2, "name1": "Web Development", "name2": "Wordpress" },
-      { "id": 3, "name1": "Professional Websites", "name2": "Astro.js" },
-      { "id": 4, "name1": "E-commerce", "name2": "Woocommerce" },
-      { "id": 5, "name1": "Content", "name2": "Creation" },
-      { "id": 6, "name1": "Maintenance", "name2": "Support" }
+      {
+        "id": 1,
+        "title": "Identity & branding",
+        "description": "We create standout visual identities with personality for brands that want to differentiate themselves",
+        "metaLabel": "Capabilities",
+        "meta": "Naming, visual identity, art direction, brand applications, content creation and illustration"
+      },
+      {
+        "id": 2,
+        "title": "Web design & development",
+        "description": "We design and build custom websites that combine aesthetics, functionality, and performance",
+        "metaLabel": "Technologies",
+        "meta": "WordPress, Astro, and Front-End development"
+      },
+      {
+        "id": 3,
+        "title": "Online stores",
+        "description": "We create digital shopping experiences tailored to each business's products and goals",
+        "metaLabel": "Technologies",
+        "meta": "WooCommerce and WordPress"
+      },
+      {
+        "id": 4,
+        "title": "Maintenance & optimization",
+        "description": "We maintain and improve existing websites so they stay secure, fast, and functional",
+        "metaLabel": "Capabilities",
+        "meta": "Updates, performance, security, and support"
+      }
     ],
-    "cta": "Let's start",
+    "cta": "Ask about this service",
     "promoTitle": "Let's make the magic happen",
     "promoText": "Here you can request a free consultation and also see a guide on the steps to follow when developing a brand or product.",
     "promoCta": "Free Consultation",
@@ -99,6 +121,32 @@
         "title": "Online Store",
         "name": "Products",
         "description": "We upload up to 10 of your products to the store for free, making sure they include descriptions, prices, images, categories, and attributes."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Selected projects",
+    "description": "Real work in branding, web development, and e-commerce",
+    "servicesLabel": "Services",
+    "visit": "Visit site",
+    "items": [
+      {
+        "id": 1,
+        "name": "YOKO Beauty",
+        "type": "Branding & e-commerce",
+        "services": "Naming, visual identity, art direction, web design, WooCommerce"
+      },
+      {
+        "id": 2,
+        "name": "Plutonia",
+        "type": "Web development & e-commerce",
+        "services": "WordPress development, WooCommerce, GSAP animations, interactive visual experience"
+      },
+      {
+        "id": 3,
+        "name": "RUAJ Vajilla Antigua",
+        "type": "Commercial website with online store",
+        "services": "Web design, WordPress development, WooCommerce"
       }
     ]
   },

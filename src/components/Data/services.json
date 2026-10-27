@@ -1,44 +1,30 @@
 [
     {
         "id": 1,
-        "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+        "background": "min-h-[320px] p-10 md:p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
         "arrow": "/services/ag.svg",
-        "link": "/",
+        "link": "/#contactame",
         "image": "/services/identidad.svg"
     },
     {
         "id": 2,
-        "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+        "background": "min-h-[320px] p-10 md:p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
         "arrow": "/services/ag.svg",
-        "link": "/",
+        "link": "/#contactame",
         "image": "/services/wp.svg"
     },
     {
         "id": 3,
-        "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
+        "background": "min-h-[320px] p-10 md:p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
         "arrow": "/services/aw.svg",
-        "link": "/",
-        "image": "/services/astro.svg"
-    },
-    {
-        "id": 4,
-        "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
-        "arrow": "/services/ag.svg",
-        "link": "/",
+        "link": "/#contactame",
         "image": "/services/woo.svg"
     },
     {
-        "id": 5,
-        "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+        "id": 4,
+        "background": "min-h-[320px] p-10 md:p-12 bg-[#F5BDE9] rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
         "arrow": "/services/ag.svg",
-        "link": "/",
-        "image": "/services/redes.svg"
-    },
-    {
-        "id": 6,
-        "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
-        "arrow": "/services/aw.svg",
-        "link": "/",
+        "link": "/#contactame",
         "image": "/services/devLogo.svg"
     }
 ]

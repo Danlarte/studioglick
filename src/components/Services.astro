@@ -12,7 +12,13 @@ const t = getDict(locale);
 
 const services = servicesData.map((item) => {
   const text = t.services.items.find((i) => i.id === item.id);
-  return { ...item, name1: text?.name1 ?? "", name2: text?.name2 ?? "" };
+  return {
+    ...item,
+    title: text?.title ?? "",
+    description: text?.description ?? "",
+    metaLabel: text?.metaLabel ?? "",
+    meta: text?.meta ?? "",
+  };
 });
 ---
 <Container>
@@ -21,31 +27,32 @@ const services = servicesData.map((item) => {
     <Topic title={t.services.title} description={t.services.description}>
 </div>
 
-<div id="custom-font" class="flex-row items-center gap-4 mt-18 mb-8 py-5 ">
+<div class="flex-row items-center gap-4 mt-18 mb-8 py-5 ">
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
 
         <!-- card start-->
         {
-        services.map(({ background, name1, name2, arrow, link, image} ) => (
+        services.map(({ background, title, description, metaLabel, meta, arrow, link, image} ) => (
         <div class={background}>
-            <div class="flex-col justify-center items-start gap-[93px] inline-flex">
-                <div class="flex-col justify-start items-start flex">
-                    <div class="px-[7px] bg-lime-300 rounded-[7px] flex-col justify-start items-start gap-2.5 flex">
-                        <div class=" text-3xl font-medium mt-10 ml-10">{name1}</div>
-                    </div>
-                    <div class="px-[7px] bg-lime-300 rounded-[7px] flex-col justify-start items-start gap-2.5 flex">
-                        <div class="text-3xl font-medium mt-1 ml-10">{name2}</div>
-                    </div>
+            <div class="flex flex-col justify-between gap-10 self-stretch">
+                <div class="flex flex-col gap-5">
+                    <h3 class="text-3xl font-medium">
+                        <span class="px-3 py-1 bg-lime-300 rounded-[7px]">{title}</span>
+                    </h3>
+                    <p class="text-lg font-normal leading-7 max-w-[28rem]">{description}</p>
+                    <p class="text-sm font-light leading-6 max-w-[28rem]">
+                        <span class="font-normal">{metaLabel}:</span> {meta}
+                    </p>
                 </div>
                 <a class="justify-start items-center gap-[15px] inline-flex" href={withLocale(link, locale)}>
                     <div class="w-[41px] h-[41px] relative">
-                        <img class="w-[41px] h-[41px] left-6 top-0  absolute" src={arrow} />
+                        <img class="w-[41px] h-[41px] left-6 top-0  absolute" src={arrow} alt="" />
                     </div>
                     <div class="text-xl font-normal leading-7 ml-6">{t.services.cta}</div>
                 </a>
             </div>
-            <div class="w-[210px] h-[170px] pt-0.5 pb-[1.95px] justify-center items-center flex ">
-                <img class="hidden md:block " src={image} />
+            <div class="hidden md:flex w-[210px] h-[170px] pt-0.5 pb-[1.95px] justify-center items-center shrink-0 ml-8">
+                <img src={image} alt="" />
             </div>
         </div>
         ))
