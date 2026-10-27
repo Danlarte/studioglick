@@ -105,22 +105,22 @@
   },
   "deliverables": {
     "title": "Al finalizar",
-    "description": "Recibirás todos los archivos de diseño y desarrollo web optimizados, incluyendo las versiones finales para impresión, formatos digitales y código fuente.",
+    "description": "Todo lo definido para tu proyecto, listo para entrar en uso desde el primer día.",
     "items": [
       {
-        "title": "Identidad de Marca",
-        "name": "Arte final",
-        "description": "Proporcionaremos todos los archivos, incluyendo logotipos, paleta de colores, tipografías y aplicaciones visuales en formatos listos para impresión y digital."
+        "title": "Identidad de marca",
+        "name": "Tu marca, lista para utilizarse",
+        "description": "Recibís los archivos finales de identidad visual y las aplicaciones acordadas para utilizar tu marca en medios digitales e impresos"
       },
       {
-        "title": "Desarrollo Web",
-        "name": "Archivos",
-        "description": "Entregamos todos los archivos necesarios para tu sitio web, incluyendo el código fuente, archivos multimedia y documentación técnica."
+        "title": "Desarrollo web",
+        "name": "Tu web, lista para publicarse",
+        "description": "Entregamos el sitio desarrollado, los accesos correspondientes y la documentación definida para el proyecto"
       },
       {
-        "title": "Tienda Online",
-        "name": "Productos",
-        "description": "Subimos gratis hasta 10 de tus productos en la tienda, asegurando que incluya descripciones, precios, imágenes, categorías y atributos."
+        "title": "Tienda online",
+        "name": "Tu tienda, preparada para vender",
+        "description": "Configuramos tu tienda online y los elementos necesarios para comenzar a gestionar productos y pedidos, según el alcance contratado"
       }
     ]
   },

@@ -105,22 +105,22 @@
   },
   "deliverables": {
     "title": "When we're done",
-    "description": "You will receive all design and web development files, optimized and including final print-ready versions, digital formats, and source code.",
+    "description": "Everything defined for your project, ready to use from day one.",
     "items": [
       {
-        "title": "Brand Identity",
-        "name": "Final artwork",
-        "description": "We will provide all files, including logos, color palette, typography, and visual applications in print- and digital-ready formats."
+        "title": "Brand identity",
+        "name": "Your brand, ready to use",
+        "description": "You receive the final visual identity files and the agreed applications to use your brand in digital and print media"
       },
       {
-        "title": "Web Development",
-        "name": "Files",
-        "description": "We deliver all the files your website needs, including source code, media files, and technical documentation."
+        "title": "Web development",
+        "name": "Your website, ready to publish",
+        "description": "We deliver the developed site, the corresponding access credentials, and the documentation defined for the project"
       },
       {
-        "title": "Online Store",
-        "name": "Products",
-        "description": "We upload up to 10 of your products to the store for free, making sure they include descriptions, prices, images, categories, and attributes."
+        "title": "Online store",
+        "name": "Your store, ready to sell",
+        "description": "We set up your online store and the elements needed to start managing products and orders, according to the contracted scope"
       }
     ]
   },

@@ -50,22 +50,22 @@ const deliverables = teamData.team.map((asset, i) => ({
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
     {
     deliverables.map(({ title, description, name, profile} ) => (
-    <div class="h-[331px] px-[35px] py-10 bg-white rounded-[45px] shadow-card border border-zinc-900 flex-col justify-start items-start gap-2.5 inline-flex text-black">
-        <div class="flex-col justify-start items-start gap-7 flex">
+    <div class="min-h-[331px] px-6 sm:px-[35px] py-10 bg-white rounded-[45px] shadow-card border border-zinc-900 flex-col justify-between items-start gap-7 text-black">
+        <div class="flex-col justify-start items-start gap-7 flex w-full">
             <div class="self-stretch justify-start items-start inline-flex">
-                <div class="grow shrink basis-0 justify-start items-center gap-8 flex">
-                    <div class="h-[102.82px] left-0 top-0 relative">
-                        <img src={profile} alt={name}/>
+                <div class="grow shrink basis-0 justify-start items-center gap-5 sm:gap-8 flex">
+                    <div class="h-[102.82px] left-0 top-0 relative shrink-0">
+                        <img src={profile} alt=""/>
                     </div>
                     <div class="flex-col justify-end items-start inline-flex">
-                        <div class="text-lg font-normal">{title}</div>
-                        <div class="text-xl font-medium">{name}</div>
+                        <div class="text-xs sm:text-sm font-medium uppercase tracking-wider opacity-70">{title}</div>
+                        <div class="text-xl sm:text-2xl font-medium leading-snug">{name}</div>
                     </div>
                 </div>
                
             </div>
             <hr class="w-full border border-black"/>
-            <p class="text-sm md:text-lg">{description}</p>
+            <p class="text-sm md:text-base font-light leading-6">{description}</p>
         </div>
     </div>
     ))
