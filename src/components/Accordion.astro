@@ -16,16 +16,16 @@ const contentId = `process-step-${index}-content`;
   <button
     id={buttonId}
     type="button"
-    class="accordion__toggle w-full flex items-center justify-between gap-5 px-6 sm:px-10 py-5 sm:py-6 text-left cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-black"
+    class="accordion__toggle w-full flex items-center justify-between gap-5 px-6 sm:px-10 py-6 sm:py-7 text-left cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-black min-h-[48px]"
     aria-expanded="false"
     aria-controls={contentId}
   >
     <span class="flex items-center gap-4 sm:gap-8 min-w-0">
-      <span class="text-3xl sm:text-4xl lg:text-5xl font-light leading-none tracking-tight opacity-70">0{index}</span>
-      <span class="text-base sm:text-xl lg:text-2xl font-medium leading-snug">{title}</span>
+      <span class="text-2xl sm:text-3xl lg:text-4xl font-light leading-none tracking-tight opacity-70">0{index}</span>
+      <span class="text-lg sm:text-xl lg:text-2xl font-medium leading-snug">{title}</span>
     </span>
     <span
-      class="w-11 h-11 sm:w-14 sm:h-14 shrink-0 flex justify-center items-center rounded-full border border-black"
+      class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 flex justify-center items-center rounded-full border border-black"
     >
       <span
         class="accordion__icon h-7 w-7 sm:h-8 sm:w-8 transition-transform duration-300 flex justify-center items-center relative"
@@ -40,10 +40,10 @@ const contentId = `process-step-${index}-content`;
     aria-labelledby={buttonId}
     class="accordion__content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out"
   >
-    <div class="overflow-hidden">
+    <div class="accordion__content-inner overflow-hidden opacity-0 translate-y-[-10px] transition-[opacity,transform] duration-300 ease-out delay-100">
       <div class="px-6 sm:px-10 pb-7 sm:pb-10">
         <div class="w-full h-[2px] bg-black"></div>
-        <p class="mt-5 max-w-3xl text-sm sm:text-lg font-light leading-7">{description}</p>
+        <p class="mt-5 max-w-3xl text-base sm:text-lg font-light leading-7">{description}</p>
       </div>
     </div>
   </div>
@@ -62,10 +62,25 @@ const contentId = `process-step-${index}-content`;
   .accordion__item.active .accordion__content {
     grid-template-rows: 1fr;
   }
+  .accordion__item.active .accordion__icon {
+    transform: rotate(45deg);
+  }
+  .accordion__item.active .accordion__content-inner {
+    opacity: 1;
+    transform: translateY(0);
+  }
   @media (prefers-reduced-motion: reduce) {
     .accordion__content,
+    .accordion__content-inner,
     .accordion__icon {
       transition: none !important;
+    }
+    .accordion__item.active .accordion__content-inner {
+      opacity: 1;
+      transform: none;
+    }
+    .accordion__item.active .accordion__icon {
+      transform: none;
     }
   }
 </style>

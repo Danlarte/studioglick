@@ -13,27 +13,27 @@ const locale = getLocale(Astro.url);
 <Container>
 <div class="relative flex flex-col items-center md:flex-row pt-14" id="hero" >
     <div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-        <div class="text-left space-y-5">
-            <p class="text-xs md:text-sm font-normal uppercase tracking-[0.2em] text-center md:text-left">{t.hero.eyebrow}</p>
-            <h1 class="text-5xl font-medium leading-none md:text-6xl text-center md:text-left">{t.hero.title1}<br> {t.hero.title2}</h1>
-            <h2 class="text-2xl md:text-3xl font-normal leading-8 text-center md:text-left">{t.hero.subtitle}</h2>
-            <p class="text-lg font-light leading-7 max-w-[36rem] text-center md:text-left">{t.hero.description}</p>
-            <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 pt-2">
-                <a href={withLocale("/#contactame", locale)} class="w-full sm:w-auto px-8 py-5 bg-zinc-900 hover:bg-white rounded-2xl text-center text-white hover:text-black border text-xl font-normal leading-7">{t.hero.cta}
+        <div class="text-left space-y-5 hero-content">
+            <p class="font-normal uppercase tracking-[0.2em] text-center md:text-left hero-reveal hero-reveal-1" style="font-size: clamp(0.75rem, 2vw, 0.875rem);">{t.hero.eyebrow}</p>
+            <h1 class="font-medium leading-[1.1] text-center md:text-left hero-reveal hero-reveal-2" style="font-size: clamp(2.5rem, 6vw, 4rem);">{t.hero.title1}<br> {t.hero.title2}</h1>
+            <h2 class="font-normal leading-8 text-center md:text-left hero-reveal hero-reveal-3" style="font-size: clamp(1.25rem, 3vw, 1.875rem);">{t.hero.subtitle}</h2>
+            <p class="font-light leading-7 max-w-[36rem] text-center md:text-left hero-reveal hero-reveal-4" style="font-size: clamp(1rem, 2vw, 1.125rem);">{t.hero.description}</p>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 pt-2 hero-reveal hero-reveal-5">
+                <a href={withLocale("/#contactame", locale)} class="w-full sm:w-auto px-8 py-5 bg-zinc-900 hover:bg-white rounded-2xl text-center text-white hover:text-black border transition-colors duration-200" style="font-size: clamp(1rem, 2vw, 1.25rem);">{t.hero.cta}
                 </a>
-                <a href={withLocale("/#proyectos", locale)} class="w-full sm:w-auto px-8 py-5 bg-white hover:bg-zinc-900 rounded-2xl text-center text-black hover:text-white border text-xl font-normal leading-7">{t.hero.ctaSecondary}
+                <a href={withLocale("/#proyectos", locale)} class="w-full sm:w-auto px-8 py-5 bg-white hover:bg-zinc-900 rounded-2xl text-center text-black hover:text-white border transition-colors duration-200" style="font-size: clamp(1rem, 2vw, 1.25rem);">{t.hero.ctaSecondary}
                 </a>
             </div>
         </div>
     </div>
     <div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10 lg:ml-12">
-        <img src="/frontWeb.svg" width="100%" alt={t.hero.alt}/>
+        <img src="/frontWeb.svg" width="100%" alt={t.hero.alt} class="hero-illustration"/>
     </div>
 </div>
 
 
 <div class="slider overflow-hidden w-[100%] mx-auto">
-    <div class="slide-track flex animate-scroll w-[calc(50px_*_16)]">
+    <div class="slide-track flex animate-scroll w-[calc(200px_*_16)]">
       <div class="slide w-[200px]">
         <img class="w-full" src="/clients/branding.svg" alt={t.hero.slideAlt}>
       </div>
@@ -83,4 +83,53 @@ const locale = getLocale(Astro.url);
   </div>
   
 </Container>
+
+<style>
+  .hero-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: hero-reveal-in 0.6s ease-out forwards;
+  }
+  .hero-reveal-1 { animation-delay: 0ms; }
+  .hero-reveal-2 { animation-delay: 100ms; }
+  .hero-reveal-3 { animation-delay: 200ms; }
+  .hero-reveal-4 { animation-delay: 300ms; }
+  .hero-reveal-5 { animation-delay: 400ms; }
+
+  @keyframes hero-reveal-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-illustration {
+    animation: hero-float 4s ease-in-out infinite;
+  }
+
+  @keyframes hero-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .slide-track {
+    animation: scroll 30s linear infinite;
+    width: calc(200px * 16);
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-200px * 8)); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-reveal,
+    .hero-illustration,
+    .slide-track {
+      animation: none !important;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
 

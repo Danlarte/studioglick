@@ -214,43 +214,6 @@ table.has-fixed-layout tr:hover {
 
 
 
-/* transition hero slider tecnologies Astro.js, netlify , wp , tailwind , docker, github , notion , aws , graphql, node , js,    */
-
-.slider{
-  width: 72vw;
-  height: auto;
-  margin: auto;
-  overflow: hidden;
-  background-color: #131313;
-}
-
-.slider .slide-track {
-  display: flex;
-  animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
-  width: calc(200px * 16);
-
-}
-
-.slider .slide{
-  width: 400px;
-  
-}
-.slider .slide img{
- width: 100%;
-}
-
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -wekit-transform:translateX(calc(-200px * 8));
-    transform: translateX(calc(-200px * 8));
-  }
-}
-
 /* Estilos cards productos , acordion, swiper, form*/
 
 #custom-font{
@@ -266,4 +229,16 @@ table.has-fixed-layout tr:hover {
 }
 #swiper{
   font-family:'Livvic', sans-serif ;
+}
+
+/* Global reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

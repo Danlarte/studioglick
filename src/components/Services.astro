@@ -33,26 +33,26 @@ const services = servicesData.map((item) => {
         <!-- card start-->
         {
         services.map(({ background, title, description, metaLabel, meta, arrow, link, image} ) => (
-        <div class={background}>
+        <div class={`${background} service-card`}>
             <div class="flex flex-col justify-between gap-10 self-stretch">
                 <div class="flex flex-col gap-5">
-                    <h3 class="text-3xl font-medium">
+                    <h3 class="text-2xl sm:text-3xl font-medium">
                         <span class="px-3 py-1 bg-lime-300 rounded-[7px]">{title}</span>
                     </h3>
-                    <p class="text-lg font-normal leading-7 max-w-[28rem]">{description}</p>
+                    <p class="text-base sm:text-lg font-normal leading-7 max-w-[28rem]">{description}</p>
                     <p class="text-sm font-light leading-6 max-w-[28rem]">
                         <span class="font-normal">{metaLabel}:</span> {meta}
                     </p>
                 </div>
-                <a class="justify-start items-center gap-[15px] inline-flex" href={withLocale(link, locale)}>
+                <a class="justify-start items-center gap-[15px] inline-flex service-card-cta" href={withLocale(link, locale)}>
                     <div class="w-[41px] h-[41px] relative">
-                        <img class="w-[41px] h-[41px] left-6 top-0  absolute" src={arrow} alt="" />
+                        <img class="w-[41px] h-[41px] left-6 top-0  absolute service-card-arrow" src={arrow} alt="" />
                     </div>
-                    <div class="text-xl font-normal leading-7 ml-6">{t.services.cta}</div>
+                    <div class="text-lg sm:text-xl font-normal leading-7 ml-6">{t.services.cta}</div>
                 </a>
             </div>
-            <div class="hidden md:flex w-[210px] h-[170px] pt-0.5 pb-[1.95px] justify-center items-center shrink-0 ml-8">
-                <img src={image} alt="" />
+            <div class="hidden md:flex w-full md:w-[210px] h-[170px] pt-0.5 pb-[1.95px] justify-center items-center shrink-0 ml-8">
+                <img src={image} alt="" class="w-full h-full object-contain" />
             </div>
         </div>
         ))
@@ -63,23 +63,63 @@ const services = servicesData.map((item) => {
     
 </div>
 
-<div class="flex-row items-center my-6 p-14 bg-gray-950 rounded-[45px]">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="justify-start items-center gap-[275px] flex">
-            <div class="flex-col justify-start items-start gap-[26px] inline-flex text-black">
-                <div id="custom-font" class="text-3xl font-medium">{t.services.promoTitle}</div>
-                <div class="text-lg font-normal">{t.services.promoText}</div>
-                <a href="/" class="px-[35px] py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-[14px] justify-start items-start gap-2.5 inline-flex">
-                    <div   id="custom-font" class="text-center text-xl font-normal leading-7">{t.services.promoCta}</div>
-                </a>
-            </div>
+<div class="flex-row items-center my-6 p-6 sm:p-10 lg:p-14 bg-gray-950 rounded-[45px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
+        <div class="flex-col justify-start items-start gap-6 sm:gap-8 text-center md:text-start">
+            <div id="custom-font" class="text-2xl sm:text-3xl lg:text-4xl font-medium">{t.services.promoTitle}</div>
+            <div class="text-base sm:text-lg font-normal">{t.services.promoText}</div>
+            <a href="/" class="px-6 sm:px-8 py-4 sm:py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-[14px] inline-flex transition-colors duration-200">
+                <div id="custom-font" class="text-base sm:text-xl font-normal leading-7">{t.services.promoCta}</div>
+            </a>
         </div>
-        <div class="hidden md:grid justify-items-center -m-20 mt-6">
-            <img src="/services/refrescoWeb.svg" width="70%" alt={t.services.alt} />
+        <div class="relative md:order-first">
+            <img src="/services/refrescoWeb.svg" width="70%" alt={t.services.alt} class="ideas-can mx-auto" />
         </div>
     </div>
 </div>
 
 </section> 
 </Container>
+
+<style>
+  .service-card {
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    border: 2px solid transparent;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    border-color: #d4ff2a;
+  }
+  .service-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .service-card-arrow {
+    transition: transform 200ms ease;
+  }
+  .service-card:hover .service-card-arrow {
+    transform: translateX(4px);
+  }
+
+  .ideas-can {
+    animation: can-float 3s ease-in-out infinite;
+  }
+
+  @keyframes can-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(1deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-card,
+    .service-card-arrow,
+    .ideas-can {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+</style>
 

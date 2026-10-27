@@ -30,58 +30,58 @@ const secondary = projects.filter((p) => !p.featured);
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
     {featured && (
-    <a href={featured.site} target="_blank" rel="noopener noreferrer" aria-label={featured.name} class="group md:col-span-2 bg-white rounded-[45px] shadow-card border border-black overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:-translate-y-1">
-        <div class="md:w-7/12 overflow-hidden">
+    <a href={featured.site} target="_blank" rel="noopener noreferrer" aria-label={featured.name} class="group project-card md:col-span-2 bg-white rounded-[45px] shadow-card border border-black overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:-translate-y-1">
+        <div class="md:w-7/12 relative overflow-hidden" style="aspect-ratio: 4/3;">
             {featured.image ? (
                 <img src={featured.image} alt={featured.name} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             ) : (
-                <div class:list={["h-64 md:h-full min-h-[300px] flex items-center justify-center transition-transform duration-500 group-hover:scale-105", featured.placeholder]}>
-                    <span class="text-4xl md:text-6xl font-medium text-center px-6">{featured.name}</span>
+                <div class:list={["absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105", featured.placeholder]}>
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-medium text-center px-4">{featured.name}</span>
                 </div>
             )}
         </div>
-        <div class="md:w-5/12 p-10 md:p-12 flex flex-col justify-between gap-10">
-            <div class="flex flex-col gap-4">
-                <p class="text-xs uppercase tracking-[0.2em] font-normal">{featured.type}</p>
-                <h3 class="text-3xl md:text-4xl font-medium">
+        <div class="md:w-5/12 p-6 sm:p-8 md:p-10 flex flex-col justify-between gap-8">
+            <div class="flex flex-col gap-3">
+                <p class="text-xs sm:text-sm uppercase tracking-[0.2em] font-normal">{featured.type}</p>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-medium">
                     <span class="px-3 py-1 bg-lime-300 rounded-[7px]">{featured.name}</span>
                 </h3>
-                <p class="text-sm font-light leading-6 max-w-[28rem]">
+                <p class="text-sm sm:text-base font-light leading-6 max-w-[28rem]">
                     <span class="font-normal">{t.projects.servicesLabel}:</span> {featured.services}
                 </p>
             </div>
-            <span class="inline-flex items-center gap-3 text-xl font-normal">
+            <span class="inline-flex items-center gap-3 text-lg sm:text-xl font-normal">
                 {t.projects.visit}
-                <img src="/services/ag.svg" alt="" class="w-10 h-10 transition-transform duration-300 group-hover:translate-x-1.5" />
+                <img src="/services/ag.svg" alt="" class="w-8 h-8 sm:w-10 sm:h-10 project-arrow transition-transform duration-300 group-hover:translate-x-2" />
             </span>
         </div>
     </a>
     )}
 
     {secondary.map((project) => (
-    <a href={project.site} target="_blank" rel="noopener noreferrer" aria-label={project.name} class="group bg-white rounded-[45px] shadow-card border border-black overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1">
-        <div class="overflow-hidden">
+    <a href={project.site} target="_blank" rel="noopener noreferrer" aria-label={project.name} class="group project-card bg-white rounded-[45px] shadow-card border border-black overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1">
+        <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
             {project.image ? (
                 <img src={project.image} alt={project.name} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             ) : (
-                <div class:list={["h-64 min-h-[260px] flex items-center justify-center transition-transform duration-500 group-hover:scale-105", project.placeholder]}>
-                    <span class="text-3xl md:text-4xl font-medium text-center px-6">{project.name}</span>
+                <div class:list={["absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105", project.placeholder]}>
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-medium text-center px-4">{project.name}</span>
                 </div>
             )}
         </div>
-        <div class="p-8 md:p-10 flex flex-col gap-8 flex-1">
-            <div class="flex flex-col gap-4">
-                <p class="text-xs uppercase tracking-[0.2em] font-normal">{project.type}</p>
-                <h3 class="text-2xl md:text-3xl font-medium">
+        <div class="p-6 sm:p-8 flex flex-col gap-6 flex-1">
+            <div class="flex flex-col gap-3">
+                <p class="text-xs sm:text-sm uppercase tracking-[0.2em] font-normal">{project.type}</p>
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-medium">
                     <span class="px-3 py-1 bg-lime-300 rounded-[7px]">{project.name}</span>
                 </h3>
                 <p class="text-sm font-light leading-6">
                     <span class="font-normal">{t.projects.servicesLabel}:</span> {project.services}
                 </p>
             </div>
-            <span class="inline-flex items-center gap-3 text-xl font-normal mt-auto">
+            <span class="inline-flex items-center gap-3 text-lg sm:text-xl font-normal mt-auto">
                 {t.projects.visit}
-                <img src="/services/ag.svg" alt="" class="w-10 h-10 transition-transform duration-300 group-hover:translate-x-1.5" />
+                <img src="/services/ag.svg" alt="" class="w-8 h-8 sm:w-10 sm:h-10 project-arrow transition-transform duration-300 group-hover:translate-x-2" />
             </span>
         </div>
     </a>
@@ -90,3 +90,28 @@ const secondary = projects.filter((p) => !p.featured);
 </div>
 </section>
 </Container>
+
+<style>
+  .project-card {
+    transition: transform 300ms ease, box-shadow 300ms ease;
+  }
+  .project-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  .project-arrow {
+    transition: transform 300ms ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .project-card img,
+    .project-arrow {
+      transition: none !important;
+      transform: none !important;
+    }
+    .project-card:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+</style>

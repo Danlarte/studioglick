@@ -21,13 +21,14 @@ const mailHref = `mailto:studioglick@gmail.com?subject=${encodeURIComponent(t.co
             <div class="space-y-6 text-center md:text-start">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight">{t.contact.title}</h2>
                 <p class="text-lg sm:text-xl font-light leading-7 text-zinc-300">{t.contact.description}</p>
-                <a href={mailHref} class="inline-flex w-full sm:w-auto justify-center items-center px-8 py-5 bg-lime hover:bg-white text-black rounded-2xl text-xl font-medium border border-black transition duration-300">
+                <a href={mailHref} class="contact-cta inline-flex w-full sm:w-auto justify-center items-center px-8 py-5 bg-lime hover:bg-white text-black rounded-2xl text-xl font-medium border border-black transition-colors duration-200 relative overflow-hidden" data-magnetic>
                     {t.contact.cta}
+                    <span class="contact-ripple absolute inset-0 bg-white/30 rounded-[2xl] pointer-events-none"></span>
                 </a>
             </div>
             <div class="flex justify-center md:justify-end">
                 <div class="flex items-center justify-center h-52 sm:h-64 md:h-80 w-52 sm:w-64 md:w-80 rounded-full bg-lime">
-                    <img src="/team/contact.svg" alt="" class="h-[82%] w-auto" />
+                    <img src="/team/contact.svg" alt="" class="h-[82%] w-auto contact-illustration" />
                 </div>
             </div>
         </div>
@@ -35,7 +36,7 @@ const mailHref = `mailto:studioglick@gmail.com?subject=${encodeURIComponent(t.co
             <p class="text-sm uppercase tracking-widest text-zinc-400 shrink-0">{t.contact.channelsLabel}</p>
             <div class="flex flex-wrap items-center gap-4">
                 {socials.map(({ href, icon, label }) => (
-                    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} class="inline-flex items-center gap-3 px-5 py-3 bg-white text-black rounded-full border border-black hover:bg-lime transition duration-300 font-medium">
+                    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} class="inline-flex items-center gap-3 px-5 py-4 bg-white text-black rounded-full border border-black hover:bg-lime transition-colors duration-200 font-medium min-h-[44px]">
                         <img src={icon} alt="" class="h-5 w-5" aria-hidden="true" />
                         {label}
                     </a>
@@ -47,3 +48,76 @@ const mailHref = `mailto:studioglick@gmail.com?subject=${encodeURIComponent(t.co
 </section>
 
 </Container>
+
+<style>
+  .contact-cta {
+    position: relative;
+    transition: transform 150ms ease-out, background-color 200ms ease, color 200ms ease;
+  }
+  .contact-ripple {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 400ms ease-out, opacity 400ms ease-out;
+  }
+  .contact-cta:active .contact-ripple {
+    transform: scale(2.5);
+    opacity: 1;
+    transition: transform 0ms, opacity 100ms ease-out;
+  }
+  .contact-illustration {
+    animation: contact-float 4s ease-in-out infinite;
+  }
+
+  @keyframes contact-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-cta,
+    .contact-ripple,
+    .contact-illustration {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cta = document.querySelector('.contact-cta[data-magnetic]') as HTMLElement | null;
+    if (!cta) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    let rafId = 0;
+
+    cta.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = cta.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const deltaX = (e.clientX - centerX) * 0.15;
+      const deltaY = (e.clientY - centerY) * 0.15;
+
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        cta.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+      });
+    });
+
+    cta.addEventListener('mouseleave', () => {
+      cancelAnimationFrame(rafId);
+      cta.style.transform = 'translate(0, 0)';
+    });
+
+    cta.addEventListener('mousedown', () => {
+      cta.style.transition = 'transform 80ms ease-out';
+    });
+
+    cta.addEventListener('mouseup', () => {
+      cta.style.transition = 'transform 150ms ease-out';
+    });
+  });
+</script>

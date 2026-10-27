@@ -47,26 +47,22 @@ const deliverables = teamData.team.map((asset, i) => ({
 
 
 <div class="flex-row items-center py-5" id="team">
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6">
     {
     deliverables.map(({ title, description, name, profile} ) => (
-    <div class="min-h-[331px] px-6 sm:px-[35px] py-10 bg-white rounded-[45px] shadow-card border border-zinc-900 flex-col justify-between items-start gap-7 text-black">
-        <div class="flex-col justify-start items-start gap-7 flex w-full">
-            <div class="self-stretch justify-start items-start inline-flex">
-                <div class="grow shrink basis-0 justify-start items-center gap-5 sm:gap-8 flex">
-                    <div class="h-[102.82px] left-0 top-0 relative shrink-0">
-                        <img src={profile} alt=""/>
-                    </div>
-                    <div class="flex-col justify-end items-start inline-flex">
-                        <div class="text-xs sm:text-sm font-medium uppercase tracking-wider opacity-70">{title}</div>
-                        <div class="text-xl sm:text-2xl font-medium leading-snug">{name}</div>
-                    </div>
-                </div>
-               
+    <div class="px-6 sm:px-8 py-8 bg-white rounded-[45px] shadow-card border border-zinc-900 flex flex-col gap-6 text-black">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-full overflow-hidden bg-gray-100 flex-shrink-0">
+                <img src={profile} alt="" class="w-full h-full object-cover" />
             </div>
-            <hr class="w-full border border-black"/>
-            <p class="text-sm md:text-base font-light leading-6">{description}</p>
+            <div class="flex-col justify-start items-start gap-1 flex-1 text-center sm:text-start">
+                <div class="text-xs sm:text-sm font-medium uppercase tracking-wider opacity-70">{title}</div>
+                <div class="text-lg sm:text-xl font-medium leading-snug">{name}</div>
+            </div>
+           
         </div>
+        <hr class="w-full border border-black"/>
+        <p class="text-base font-light leading-7">{description}</p>
     </div>
     ))
     }
@@ -74,9 +70,11 @@ const deliverables = teamData.team.map((asset, i) => ({
 </div>
 
 <style>
-    img{
-        max-width: 60%;
+  @media (max-width: 767px) {
+    #team .grid {
+      gap: 1rem;
     }
+  }
 </style>
 
 </Container>
